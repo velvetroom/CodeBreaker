@@ -1,10 +1,5 @@
-//
-//  iOS.swift
-//  iOS
-//
-//  Created by vin on 16.02.19.
-//
+import AppKit
 
-class iOS {
-
+@NSApplicationMain class App: NSWindow, NSApplicationDelegate {
+    
 }

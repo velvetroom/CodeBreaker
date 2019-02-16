@@ -14,10 +14,27 @@
 		200B2EC022184A6A00738347 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B2EBE22184A6A00738347 /* Tests.swift */; };
 		200B2EC322184A7500738347 /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B2EC222184A7500738347 /* Code.swift */; };
 		200B2EC522184A7500738347 /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B2EC222184A7500738347 /* Code.swift */; };
+		200B2EDE22185B0200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
+		200B2EE122185B1200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDD22185AEF00738347 /* libBreaker.a */; };
+		200B2EE222185B1800738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		200B2E7B2218480800738347 /* PBXContainerItemProxy */ = {
+		200B2ED622185A2700738347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 200B2E52221847D000738347 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 200B2E5B221847F000738347;
+			remoteInfo = Mac;
+		};
+		200B2EDA22185A3700738347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 200B2E52221847D000738347 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 200B2E69221847FC00738347;
+			remoteInfo = iOS;
+		};
+		200B2EDF22185B0900738347 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 200B2E52221847D000738347 /* Project object */;
 			proxyType = 1;
@@ -52,11 +69,11 @@
 		200B2EBD22184A6A00738347 /* Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tests.plist; sourceTree = "<group>"; };
 		200B2EBE22184A6A00738347 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		200B2EC222184A7500738347 /* Code.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
-		200B2EC422184A7500738347 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		200B2EC722184D5200738347 /* Code:Breaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code:Breaker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		200B2EC822184D5B00738347 /* Code:Breaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code:Breaker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		200B2EC922184F2200738347 /* libCodeBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCodeBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		200B2ECA22184F3300738347 /* libCodeBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCodeBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		200B2EC422184A7500738347 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = /Users/vin/dev/other/CodeBreaker/build/Debug/Tests.xctest; sourceTree = "<absolute>"; };
+		200B2EC722184D5200738347 /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CodeBreaker.app; path = "/Users/vin/dev/other/CodeBreaker/build/Debug-iphoneos/CodeBreaker.app"; sourceTree = "<absolute>"; };
+		200B2EC822184D5B00738347 /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CodeBreaker.app; path = /Users/vin/dev/other/CodeBreaker/build/Debug/CodeBreaker.app; sourceTree = "<absolute>"; };
+		200B2EDC22185AEA00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		200B2EDD22185AEF00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200B2EE222185B1800738347 /* libBreaker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200B2EDE22185B0200738347 /* libBreaker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200B2EE122185B1200738347 /* libBreaker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,14 +126,12 @@
 				200B2EB422184A5E00738347 /* Mac */,
 				200B2EAD22184A5500738347 /* iOS */,
 				200B2EC622184A7A00738347 /* Shared */,
+				200B2ECB2218559800738347 /* Frameworks */,
 				200B2EAA22184A2500738347 /* LICENSE */,
 				200B2EAC22184A2500738347 /* README.md */,
 				200B2EAB22184A2500738347 /* .gitignore */,
-				200B2EC422184A7500738347 /* Tests.xctest */,
-				200B2EC722184D5200738347 /* Code:Breaker.app */,
-				200B2EC822184D5B00738347 /* Code:Breaker.app */,
-				200B2EC922184F2200738347 /* libCodeBreaker.a */,
-				200B2ECA22184F3300738347 /* libCodeBreaker.a */,
+				200B2EDC22185AEA00738347 /* libBreaker.a */,
+				200B2EDD22185AEF00738347 /* libBreaker.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +180,13 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		200B2ECB2218559800738347 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -189,7 +214,7 @@
 			);
 			name = Mac;
 			productName = Mac;
-			productReference = 200B2EC922184F2200738347 /* libCodeBreaker.a */;
+			productReference = 200B2EDC22185AEA00738347 /* libBreaker.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		200B2E69221847FC00738347 /* iOS */ = {
@@ -206,7 +231,7 @@
 			);
 			name = iOS;
 			productName = iOS;
-			productReference = 200B2ECA22184F3300738347 /* libCodeBreaker.a */;
+			productReference = 200B2EDD22185AEF00738347 /* libBreaker.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		200B2E742218480800738347 /* Tests */ = {
@@ -220,7 +245,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				200B2E7C2218480800738347 /* PBXTargetDependency */,
+				200B2ED722185A2700738347 /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = Tests;
@@ -238,10 +263,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				200B2EE022185B0900738347 /* PBXTargetDependency */,
 			);
 			name = MacApp;
 			productName = MacApp;
-			productReference = 200B2EC822184D5B00738347 /* Code:Breaker.app */;
+			productReference = 200B2EC822184D5B00738347 /* CodeBreaker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		200B2E972218482E00738347 /* iOSApp */ = {
@@ -255,10 +281,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				200B2EDB22185A3700738347 /* PBXTargetDependency */,
 			);
 			name = iOSApp;
 			productName = iOSApp;
-			productReference = 200B2EC722184D5200738347 /* Code:Breaker.app */;
+			productReference = 200B2EC722184D5200738347 /* CodeBreaker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -378,10 +405,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		200B2E7C2218480800738347 /* PBXTargetDependency */ = {
+		200B2ED722185A2700738347 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 200B2E5B221847F000738347 /* Mac */;
-			targetProxy = 200B2E7B2218480800738347 /* PBXContainerItemProxy */;
+			targetProxy = 200B2ED622185A2700738347 /* PBXContainerItemProxy */;
+		};
+		200B2EDB22185A3700738347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 200B2E69221847FC00738347 /* iOS */;
+			targetProxy = 200B2EDA22185A3700738347 /* PBXContainerItemProxy */;
+		};
+		200B2EE022185B0900738347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 200B2E5B221847F000738347 /* Mac */;
+			targetProxy = 200B2EDF22185B0900738347 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,7 +432,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_NAME = CodeBreaker;
+				PRODUCT_NAME = Breaker;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -410,7 +447,7 @@
 				ENABLE_BITCODE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_NAME = CodeBreaker;
+				PRODUCT_NAME = Breaker;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 4.2;
@@ -468,7 +505,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -523,7 +559,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -581,7 +616,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -638,7 +672,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -841,7 +874,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = CodeBreaker.Mac;
-				PRODUCT_NAME = "Code:Breaker";
+				PRODUCT_NAME = CodeBreaker;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 			};
@@ -902,7 +935,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = CodeBreaker.Mac;
-				PRODUCT_NAME = "Code:Breaker";
+				PRODUCT_NAME = CodeBreaker;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
@@ -967,7 +1000,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = CodeBreaker.iOS;
-				PRODUCT_NAME = "Code:Breaker";
+				PRODUCT_NAME = CodeBreaker;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1027,7 +1060,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = CodeBreaker.iOS;
-				PRODUCT_NAME = "Code:Breaker";
+				PRODUCT_NAME = CodeBreaker;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
