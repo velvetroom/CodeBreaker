@@ -4,30 +4,43 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Mac.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
 		<key>MacApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Tests.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>iOS.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>iOSApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>200B2E5B221847F000738347</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>200B2E69221847FC00738347</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>200B2E742218480800738347</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>200B2E832218481900738347</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>200B2E972218482E00738347</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
