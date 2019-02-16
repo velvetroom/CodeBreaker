@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "200B2E972218482E00738347"
-               BuildableName = "iOSApp.app"
+               BuildableName = "CodeBreaker.app"
                BlueprintName = "iOSApp"
                ReferencedContainer = "container:CodeBreaker.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "200B2E69221847FC00738347"
-               BuildableName = "libiOS.a"
+               BuildableName = "libBreaker.a"
                BlueprintName = "iOS"
                ReferencedContainer = "container:CodeBreaker.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "200B2E972218482E00738347"
-            BuildableName = "iOSApp.app"
+            BuildableName = "CodeBreaker.app"
             BlueprintName = "iOSApp"
             ReferencedContainer = "container:CodeBreaker.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "200B2E972218482E00738347"
-            BuildableName = "iOSApp.app"
+            BuildableName = "CodeBreaker.app"
             BlueprintName = "iOSApp"
             ReferencedContainer = "container:CodeBreaker.xcodeproj">
          </BuildableReference>
@@ -89,7 +89,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "200B2E972218482E00738347"
-            BuildableName = "iOSApp.app"
+            BuildableName = "CodeBreaker.app"
             BlueprintName = "iOSApp"
             ReferencedContainer = "container:CodeBreaker.xcodeproj">
          </BuildableReference>

@@ -17,6 +17,7 @@
 		200B2EDE22185B0200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
 		200B2EE122185B1200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDD22185AEF00738347 /* libBreaker.a */; };
 		200B2EE222185B1800738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
+		201EB68F2218613600E4B33F /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EB68E2218613600E4B33F /* Terminal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,11 +70,12 @@
 		200B2EBD22184A6A00738347 /* Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tests.plist; sourceTree = "<group>"; };
 		200B2EBE22184A6A00738347 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		200B2EC222184A7500738347 /* Code.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
-		200B2EC422184A7500738347 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = /Users/vin/dev/other/CodeBreaker/build/Debug/Tests.xctest; sourceTree = "<absolute>"; };
-		200B2EC722184D5200738347 /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CodeBreaker.app; path = "/Users/vin/dev/other/CodeBreaker/build/Debug-iphoneos/CodeBreaker.app"; sourceTree = "<absolute>"; };
-		200B2EC822184D5B00738347 /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CodeBreaker.app; path = /Users/vin/dev/other/CodeBreaker/build/Debug/CodeBreaker.app; sourceTree = "<absolute>"; };
 		200B2EDC22185AEA00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		200B2EDD22185AEF00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		201EB68B2218600100E4B33F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		201EB68C2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		201EB68D2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		201EB68E2218613600E4B33F /* Terminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,9 @@
 				200B2EAB22184A2500738347 /* .gitignore */,
 				200B2EDC22185AEA00738347 /* libBreaker.a */,
 				200B2EDD22185AEF00738347 /* libBreaker.a */,
+				201EB68B2218600100E4B33F /* Tests.xctest */,
+				201EB68C2218600100E4B33F /* CodeBreaker.app */,
+				201EB68D2218600100E4B33F /* CodeBreaker.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +157,7 @@
 				200B2EB722184A5E00738347 /* Mac.plist */,
 				200B2EB622184A5E00738347 /* Mac.storyboard */,
 				200B2EB822184A5E00738347 /* App.swift */,
+				201EB68E2218613600E4B33F /* Terminal.swift */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -249,7 +255,7 @@
 			);
 			name = Tests;
 			productName = Tests;
-			productReference = 200B2EC422184A7500738347 /* Tests.xctest */;
+			productReference = 201EB68B2218600100E4B33F /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		200B2E832218481900738347 /* MacApp */ = {
@@ -267,7 +273,7 @@
 			);
 			name = MacApp;
 			productName = MacApp;
-			productReference = 200B2EC822184D5B00738347 /* CodeBreaker.app */;
+			productReference = 201EB68C2218600100E4B33F /* CodeBreaker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		200B2E972218482E00738347 /* iOSApp */ = {
@@ -285,7 +291,7 @@
 			);
 			name = iOSApp;
 			productName = iOSApp;
-			productReference = 200B2EC722184D5200738347 /* CodeBreaker.app */;
+			productReference = 201EB68D2218600100E4B33F /* CodeBreaker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -391,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				200B2EBB22184A5E00738347 /* App.swift in Sources */,
+				201EB68F2218613600E4B33F /* Terminal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

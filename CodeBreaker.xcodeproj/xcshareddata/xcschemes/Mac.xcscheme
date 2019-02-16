@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "200B2E832218481900738347"
-               BuildableName = "MacApp.app"
+               BuildableName = "CodeBreaker.app"
                BlueprintName = "MacApp"
                ReferencedContainer = "container:CodeBreaker.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "200B2E5B221847F000738347"
-               BuildableName = "libMac.a"
+               BuildableName = "libBreaker.a"
                BlueprintName = "Mac"
                ReferencedContainer = "container:CodeBreaker.xcodeproj">
             </BuildableReference>
@@ -72,7 +72,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "200B2E832218481900738347"
-            BuildableName = "MacApp.app"
+            BuildableName = "CodeBreaker.app"
             BlueprintName = "MacApp"
             ReferencedContainer = "container:CodeBreaker.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "200B2E832218481900738347"
-            BuildableName = "MacApp.app"
+            BuildableName = "CodeBreaker.app"
             BlueprintName = "MacApp"
             ReferencedContainer = "container:CodeBreaker.xcodeproj">
          </BuildableReference>
@@ -114,7 +114,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "200B2E832218481900738347"
-            BuildableName = "MacApp.app"
+            BuildableName = "CodeBreaker.app"
             BlueprintName = "MacApp"
             ReferencedContainer = "container:CodeBreaker.xcodeproj">
          </BuildableReference>

@@ -12,5 +12,18 @@ import AppKit
         backgroundColor = .black
         NSApp.delegate = self
         App.shared = self
+        
+        outlets()
+    }
+    
+    private func outlets() {
+        let terminal = Terminal.shared
+        
+        contentView!.addSubview(terminal)
+        
+        terminal.topAnchor.constraint(equalTo: contentView!.topAnchor).isActive = true
+        terminal.leftAnchor.constraint(equalTo: contentView!.leftAnchor).isActive = true
+        terminal.rightAnchor.constraint(equalTo: contentView!.rightAnchor).isActive = true
+        terminal.bottomAnchor.constraint(equalTo: contentView!.bottomAnchor).isActive = true
     }
 }
