@@ -26,5 +26,8 @@ import AppKit
         terminal.leftAnchor.constraint(equalTo: contentView!.leftAnchor).isActive = true
         terminal.rightAnchor.constraint(equalTo: contentView!.rightAnchor).isActive = true
         terminal.bottomAnchor.constraint(equalTo: contentView!.bottomAnchor).isActive = true
+        
+        
+        terminal.prepare(10)
     }
 }
