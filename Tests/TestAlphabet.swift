@@ -9,5 +9,6 @@ class TestAlphabet: XCTestCase {
             XCTAssertNotNil(Alphabet().list[String(UnicodeScalar($0)!)])
             XCTAssertFalse((Alphabet().list[String(UnicodeScalar($0)!)])!.isEmpty)
         }
+        XCTAssertEqual(("a".unicodeScalars.first!.value ... "z".unicodeScalars.first!.value).count + 1, Alphabet().list.count)
     }
 }
