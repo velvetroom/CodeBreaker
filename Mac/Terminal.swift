@@ -2,17 +2,18 @@ import AppKit
 
 class Terminal: NSScrollView {
     static let shared = Terminal()
+    private let separation = CGFloat(100)
     
     private init() {
         super.init(frame: .zero)
         drawsBackground = false
         translatesAutoresizingMaskIntoConstraints = false
+        verticalScrollElasticity = .none
         documentView = NSView()
         documentView!.translatesAutoresizingMaskIntoConstraints = false
-        documentView!.wantsLayer = true
         documentView!.topAnchor.constraint(equalTo: topAnchor).isActive = true
         documentView!.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        documentView!.bottomAnchor.constraint(greaterThanOrEqualTo: bottomAnchor).isActive = true
+        documentView!.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         documentView!.rightAnchor.constraint(greaterThanOrEqualTo: rightAnchor).isActive = true
     }
     
@@ -34,15 +35,15 @@ class Terminal: NSScrollView {
         documentView!.addSubview(top)
         documentView!.addSubview(down)
         
-        center.leftAnchor.constraint(equalTo: leftAnchor, constant: 100 * x).isActive = true
+        center.leftAnchor.constraint(equalTo: leftAnchor, constant: separation * x).isActive = true
         center.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
-        top.leftAnchor.constraint(equalTo: leftAnchor, constant: 100 * x).isActive = true
-        top.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -100).isActive = true
+        top.leftAnchor.constraint(equalTo: leftAnchor, constant: separation * x).isActive = true
+        top.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -separation).isActive = true
         
-        down.leftAnchor.constraint(equalTo: leftAnchor, constant: 100 * x).isActive = true
-        down.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 100).isActive = true
+        down.leftAnchor.constraint(equalTo: leftAnchor, constant: separation * x).isActive = true
+        down.centerYAnchor.constraint(equalTo: centerYAnchor, constant: separation).isActive = true
         
-        documentView!.rightAnchor.constraint(greaterThanOrEqualTo: center.rightAnchor, constant: 100).isActive = true
+        documentView!.rightAnchor.constraint(greaterThanOrEqualTo: center.rightAnchor, constant: separation).isActive = true
     }
 }

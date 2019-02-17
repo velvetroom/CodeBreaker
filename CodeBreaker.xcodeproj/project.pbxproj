@@ -19,6 +19,14 @@
 		200B2EE222185B1800738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
 		201EB68F2218613600E4B33F /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EB68E2218613600E4B33F /* Terminal.swift */; };
 		20A7722622196102004F34AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722422196074004F34AC /* Node.swift */; };
+		20A7722822197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
+		20A7722922197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
+		20A7722B22198006004F34AC /* Rookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722A22198006004F34AC /* Rookie.swift */; };
+		20A7722C22198006004F34AC /* Rookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722A22198006004F34AC /* Rookie.swift */; };
+		20A7722E22198028004F34AC /* Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722D22198028004F34AC /* Advanced.swift */; };
+		20A7722F22198028004F34AC /* Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722D22198028004F34AC /* Advanced.swift */; };
+		20A7723122198036004F34AC /* Expert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7723022198036004F34AC /* Expert.swift */; };
+		20A7723222198036004F34AC /* Expert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7723022198036004F34AC /* Expert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +86,10 @@
 		201EB68D2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68E2218613600E4B33F /* Terminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
 		20A7722422196074004F34AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		20A7722722197D87004F34AC /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		20A7722A22198006004F34AC /* Rookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rookie.swift; sourceTree = "<group>"; };
+		20A7722D22198028004F34AC /* Advanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced.swift; sourceTree = "<group>"; };
+		20A7723022198036004F34AC /* Expert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +190,10 @@
 			isa = PBXGroup;
 			children = (
 				200B2EC222184A7500738347 /* Code.swift */,
+				20A7722722197D87004F34AC /* Level.swift */,
+				20A7722A22198006004F34AC /* Rookie.swift */,
+				20A7722D22198028004F34AC /* Advanced.swift */,
+				20A7723022198036004F34AC /* Expert.swift */,
 			);
 			path = CodeBreaker;
 			sourceTree = "<group>";
@@ -375,7 +391,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A7723122198036004F34AC /* Expert.swift in Sources */,
+				20A7722822197D87004F34AC /* Level.swift in Sources */,
+				20A7722B22198006004F34AC /* Rookie.swift in Sources */,
 				200B2EC322184A7500738347 /* Code.swift in Sources */,
+				20A7722E22198028004F34AC /* Advanced.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +403,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A7723222198036004F34AC /* Expert.swift in Sources */,
+				20A7722922197D87004F34AC /* Level.swift in Sources */,
+				20A7722C22198006004F34AC /* Rookie.swift in Sources */,
 				200B2EC522184A7500738347 /* Code.swift in Sources */,
+				20A7722F22198028004F34AC /* Advanced.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
