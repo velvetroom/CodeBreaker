@@ -20,7 +20,7 @@ class Terminal: NSScrollView {
     required init?(coder: NSCoder) { return nil }
     
     func addNode(_ position: CGPoint) {
-        let node = Node("🚀")
+        let node = Node("🏎")
         documentView!.addSubview(node)
         node.centerXAnchor.constraint(equalTo: documentView!.centerXAnchor).isActive = true
         node.centerYAnchor.constraint(equalTo: documentView!.centerYAnchor).isActive = true

@@ -9,6 +9,7 @@ import AppKit
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        UserDefaults.standard.set(false, forKey:"NSFullScreenMenuItemEverywhere")
         backgroundColor = .black
         NSApp.delegate = self
         App.shared = self
