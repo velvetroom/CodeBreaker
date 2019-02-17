@@ -19,13 +19,25 @@ import AppKit
     
     private func outlets() {
         let terminal = Terminal.shared
+        let gradientLeft = Gradient([NSColor.black.cgColor, NSColor(white:0, alpha:0).cgColor])
+        let gradientRight = Gradient([NSColor(white:0, alpha:0).cgColor, NSColor.black.cgColor])
         
         contentView!.addSubview(terminal)
+        contentView!.addSubview(gradientLeft)
+        contentView!.addSubview(gradientRight)
         
         terminal.topAnchor.constraint(equalTo: contentView!.topAnchor).isActive = true
         terminal.leftAnchor.constraint(equalTo: contentView!.leftAnchor).isActive = true
         terminal.rightAnchor.constraint(equalTo: contentView!.rightAnchor).isActive = true
         terminal.bottomAnchor.constraint(equalTo: contentView!.bottomAnchor).isActive = true
+        
+        gradientLeft.topAnchor.constraint(equalTo: contentView!.topAnchor).isActive = true
+        gradientLeft.bottomAnchor.constraint(equalTo: contentView!.bottomAnchor).isActive = true
+        gradientLeft.leftAnchor.constraint(equalTo: contentView!.leftAnchor).isActive = true
+        
+        gradientRight.topAnchor.constraint(equalTo: contentView!.topAnchor).isActive = true
+        gradientRight.bottomAnchor.constraint(equalTo: contentView!.bottomAnchor).isActive = true
+        gradientRight.rightAnchor.constraint(equalTo: contentView!.rightAnchor).isActive = true
         
         terminal.prepare(10)
     }

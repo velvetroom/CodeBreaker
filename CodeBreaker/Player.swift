@@ -1,7 +1,7 @@
 import Foundation
 
 public class Player: Codable {
-    public var level: Level = Rookie()
+    public var level: Level = Rookie() { didSet { print("asd") } }
     private var levelType = String()
     
     public init() { }

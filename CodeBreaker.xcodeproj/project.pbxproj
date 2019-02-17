@@ -29,6 +29,7 @@
 		20A7723222198036004F34AC /* Expert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7723022198036004F34AC /* Expert.swift */; };
 		20A77234221989A4004F34AC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A77233221989A4004F34AC /* Player.swift */; };
 		20A77235221989A4004F34AC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A77233221989A4004F34AC /* Player.swift */; };
+		20A7723722199861004F34AC /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7723622199861004F34AC /* Gradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		20A7722D22198028004F34AC /* Advanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced.swift; sourceTree = "<group>"; };
 		20A7723022198036004F34AC /* Expert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expert.swift; sourceTree = "<group>"; };
 		20A77233221989A4004F34AC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		20A7723622199861004F34AC /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				200B2EB622184A5E00738347 /* Mac.storyboard */,
 				200B2EB822184A5E00738347 /* App.swift */,
 				201EB68E2218613600E4B33F /* Terminal.swift */,
+				20A7723622199861004F34AC /* Gradient.swift */,
 				20A7722422196074004F34AC /* Node.swift */,
 			);
 			path = Mac;
@@ -430,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A7722622196102004F34AC /* Node.swift in Sources */,
+				20A7723722199861004F34AC /* Gradient.swift in Sources */,
 				200B2EBB22184A5E00738347 /* App.swift in Sources */,
 				201EB68F2218613600E4B33F /* Terminal.swift in Sources */,
 			);
