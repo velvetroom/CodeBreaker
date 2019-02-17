@@ -18,6 +18,7 @@
 		200B2EE122185B1200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDD22185AEF00738347 /* libBreaker.a */; };
 		200B2EE222185B1800738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
 		201EB68F2218613600E4B33F /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EB68E2218613600E4B33F /* Terminal.swift */; };
+		20A7722622196102004F34AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722422196074004F34AC /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		201EB68C2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68D2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68E2218613600E4B33F /* Terminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
+		20A7722422196074004F34AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				200B2EB622184A5E00738347 /* Mac.storyboard */,
 				200B2EB822184A5E00738347 /* App.swift */,
 				201EB68E2218613600E4B33F /* Terminal.swift */,
+				20A7722422196074004F34AC /* Node.swift */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A7722622196102004F34AC /* Node.swift in Sources */,
 				200B2EBB22184A5E00738347 /* App.swift in Sources */,
 				201EB68F2218613600E4B33F /* Terminal.swift in Sources */,
 			);

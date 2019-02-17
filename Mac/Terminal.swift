@@ -14,17 +14,15 @@ class Terminal: NSScrollView {
         documentView!.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         documentView!.bottomAnchor.constraint(greaterThanOrEqualTo: bottomAnchor).isActive = true
         documentView!.rightAnchor.constraint(greaterThanOrEqualTo: rightAnchor).isActive = true
-        
-        documentView!.layer!.addSublayer({
-            $0.path = {
-                $0.addArc(center: CGPoint(x: 400, y: 300), radius: 10, startAngle: 0, endAngle: .pi * 2, clockwise: true)
-                return $0
-            } (CGMutablePath())
-            $0.lineWidth = 4
-            $0.strokeColor = NSColor.white.cgColor
-            return $0
-        } (CAShapeLayer()))
+        addNode(.zero)
     }
     
     required init?(coder: NSCoder) { return nil }
+    
+    func addNode(_ position: CGPoint) {
+        let node = Node("🚀")
+        documentView!.addSubview(node)
+        node.centerXAnchor.constraint(equalTo: documentView!.centerXAnchor).isActive = true
+        node.centerYAnchor.constraint(equalTo: documentView!.centerYAnchor).isActive = true
+    }
 }
