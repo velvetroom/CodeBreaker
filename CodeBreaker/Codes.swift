@@ -1,4 +1,6 @@
 struct Codes {
-    let list = [
-        "hello world"]
+    static let list = [
+        "hi",
+        "hello world",
+        "lorem ipsum"]
 }

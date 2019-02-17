@@ -3,21 +3,21 @@ import XCTest
 
 class TestAlphabet: XCTestCase {
     func testCompleteness() {
-        XCTAssertNotNil(Alphabet().list[" "])
-        XCTAssertFalse(Alphabet().list[" "]!.isEmpty)
+        XCTAssertNotNil(Alphabet.map[" "])
+        XCTAssertFalse(Alphabet.map[" "]!.isEmpty)
         ("a".unicodeScalars.first!.value ... "z".unicodeScalars.first!.value).forEach {
-            XCTAssertNotNil(Alphabet().list[String(UnicodeScalar($0)!)])
-            XCTAssertFalse((Alphabet().list[String(UnicodeScalar($0)!)])!.isEmpty)
+            XCTAssertNotNil(Alphabet.map[String(UnicodeScalar($0)!)])
+            XCTAssertFalse((Alphabet.map[String(UnicodeScalar($0)!)])!.isEmpty)
         }
     }
     
     func testNoRepeat() {
-        Alphabet().list.values.enumerated().forEach { i in
-            XCTAssertNil(Alphabet().list.values.enumerated().first { $0.element == i.element && $0.offset != i.offset })
+        Alphabet.map.values.enumerated().forEach { i in
+            XCTAssertNil(Alphabet.map.values.enumerated().first { $0.element == i.element && $0.offset != i.offset })
         }
     }
     
     func testSize() {
-        XCTAssertEqual(("a".unicodeScalars.first!.value ... "z".unicodeScalars.first!.value).count + 1, Alphabet().list.count)
+        XCTAssertEqual(("a".unicodeScalars.first!.value ... "z".unicodeScalars.first!.value).count + 1, Alphabet.map.count)
     }
 }

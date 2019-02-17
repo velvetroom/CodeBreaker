@@ -12,8 +12,6 @@
 		200B2EB922184A5E00738347 /* Mac.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200B2EB622184A5E00738347 /* Mac.storyboard */; };
 		200B2EBB22184A5E00738347 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B2EB822184A5E00738347 /* App.swift */; };
 		200B2EC022184A6A00738347 /* TestPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B2EBE22184A6A00738347 /* TestPlayer.swift */; };
-		200B2EC322184A7500738347 /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B2EC222184A7500738347 /* Code.swift */; };
-		200B2EC522184A7500738347 /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B2EC222184A7500738347 /* Code.swift */; };
 		200B2EDE22185B0200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
 		200B2EE122185B1200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDD22185AEF00738347 /* libBreaker.a */; };
 		200B2EE222185B1800738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
@@ -28,6 +26,9 @@
 		2043E7262219D5A800482FBC /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E7252219D5A800482FBC /* Alphabet.swift */; };
 		2043E7272219D5A800482FBC /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E7252219D5A800482FBC /* Alphabet.swift */; };
 		2043E7292219D76A00482FBC /* TestAlphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E7282219D76A00482FBC /* TestAlphabet.swift */; };
+		2043E72B2219E24900482FBC /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72A2219E24900482FBC /* TestFactory.swift */; };
+		2043E72D2219E2A000482FBC /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72C2219E2A000482FBC /* Factory.swift */; };
+		2043E72E2219E2A000482FBC /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72C2219E2A000482FBC /* Factory.swift */; };
 		20A7722622196102004F34AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722422196074004F34AC /* Node.swift */; };
 		20A7722822197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
 		20A7722922197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
@@ -91,7 +92,6 @@
 		200B2EB822184A5E00738347 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		200B2EBD22184A6A00738347 /* Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tests.plist; sourceTree = "<group>"; };
 		200B2EBE22184A6A00738347 /* TestPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPlayer.swift; sourceTree = "<group>"; };
-		200B2EC222184A7500738347 /* Code.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
 		200B2EDC22185AEA00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		200B2EDD22185AEF00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68B2218600100E4B33F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +104,8 @@
 		2043E7232219D42500482FBC /* TestCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodes.swift; sourceTree = "<group>"; };
 		2043E7252219D5A800482FBC /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
 		2043E7282219D76A00482FBC /* TestAlphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlphabet.swift; sourceTree = "<group>"; };
+		2043E72A2219E24900482FBC /* TestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactory.swift; sourceTree = "<group>"; };
+		2043E72C2219E2A000482FBC /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		20A7722422196074004F34AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		20A7722722197D87004F34AC /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		20A7722A22198006004F34AC /* Rookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rookie.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				200B2EBE22184A6A00738347 /* TestPlayer.swift */,
 				2043E7232219D42500482FBC /* TestCodes.swift */,
 				2043E7282219D76A00482FBC /* TestAlphabet.swift */,
+				2043E72A2219E24900482FBC /* TestFactory.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -213,7 +216,6 @@
 		200B2EC122184A7500738347 /* CodeBreaker */ = {
 			isa = PBXGroup;
 			children = (
-				200B2EC222184A7500738347 /* Code.swift */,
 				2043E7202219D3BF00482FBC /* Codes.swift */,
 				20A77233221989A4004F34AC /* Player.swift */,
 				20A7722722197D87004F34AC /* Level.swift */,
@@ -223,6 +225,7 @@
 				2043E71A2219CD5100482FBC /* Breaker.swift */,
 				2043E71D2219CF1200482FBC /* Mission.swift */,
 				2043E7252219D5A800482FBC /* Alphabet.swift */,
+				2043E72C2219E2A000482FBC /* Factory.swift */,
 			);
 			path = CodeBreaker;
 			sourceTree = "<group>";
@@ -422,9 +425,9 @@
 			files = (
 				20A7723122198036004F34AC /* Expert.swift in Sources */,
 				2043E7212219D3BF00482FBC /* Codes.swift in Sources */,
+				2043E72D2219E2A000482FBC /* Factory.swift in Sources */,
 				20A7722822197D87004F34AC /* Level.swift in Sources */,
 				20A7722B22198006004F34AC /* Rookie.swift in Sources */,
-				200B2EC322184A7500738347 /* Code.swift in Sources */,
 				2043E71B2219CD5100482FBC /* Breaker.swift in Sources */,
 				2043E7262219D5A800482FBC /* Alphabet.swift in Sources */,
 				2043E71E2219CF1200482FBC /* Mission.swift in Sources */,
@@ -439,9 +442,9 @@
 			files = (
 				20A7723222198036004F34AC /* Expert.swift in Sources */,
 				2043E7222219D3BF00482FBC /* Codes.swift in Sources */,
+				2043E72E2219E2A000482FBC /* Factory.swift in Sources */,
 				20A7722922197D87004F34AC /* Level.swift in Sources */,
 				20A7722C22198006004F34AC /* Rookie.swift in Sources */,
-				200B2EC522184A7500738347 /* Code.swift in Sources */,
 				2043E71C2219CD5100482FBC /* Breaker.swift in Sources */,
 				2043E7272219D5A800482FBC /* Alphabet.swift in Sources */,
 				2043E71F2219CF1200482FBC /* Mission.swift in Sources */,
@@ -454,6 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2043E72B2219E24900482FBC /* TestFactory.swift in Sources */,
 				2043E7242219D42500482FBC /* TestCodes.swift in Sources */,
 				2043E7292219D76A00482FBC /* TestAlphabet.swift in Sources */,
 				200B2EC022184A6A00738347 /* TestPlayer.swift in Sources */,

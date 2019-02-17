@@ -1,5 +1,5 @@
 struct Alphabet {
-    let list = [
+    static let map = [
         " ": "👾",
         "a": "👩🏻‍🚀",
         "b": "🐻",
