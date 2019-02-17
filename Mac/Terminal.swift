@@ -1,4 +1,5 @@
 import AppKit
+import Breaker
 
 class Terminal: NSScrollView {
     static let shared = Terminal()
@@ -21,29 +22,17 @@ class Terminal: NSScrollView {
     
     func prepare(_ length: Int) {
         documentView!.subviews.forEach { $0.removeFromSuperview() }
-        for i in 1 ... length {
-            add(CGFloat(i))
-        }
+        (1 ... length).forEach { add(CGFloat($0)) }
     }
     
     private func add(_ x: CGFloat) {
-        let center = Node()
-        let top = Node()
-        let down = Node()
-        
-        documentView!.addSubview(center)
-        documentView!.addSubview(top)
-        documentView!.addSubview(down)
-        
-        center.leftAnchor.constraint(equalTo: leftAnchor, constant: separation * x).isActive = true
-        center.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        
-        top.leftAnchor.constraint(equalTo: leftAnchor, constant: separation * x).isActive = true
-        top.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -separation).isActive = true
-        
-        down.leftAnchor.constraint(equalTo: leftAnchor, constant: separation * x).isActive = true
-        down.centerYAnchor.constraint(equalTo: centerYAnchor, constant: separation).isActive = true
-        
-        documentView!.rightAnchor.constraint(greaterThanOrEqualTo: center.rightAnchor, constant: separation).isActive = true
+        Breaker.shared.player.level.lanes.forEach {
+            let node = Node()
+            documentView!.addSubview(node)
+            
+            node.leftAnchor.constraint(equalTo: leftAnchor, constant: separation * x).isActive = true
+            node.centerYAnchor.constraint(equalTo: centerYAnchor, constant: separation * CGFloat($0)).isActive = true
+            documentView!.rightAnchor.constraint(greaterThanOrEqualTo: node.rightAnchor, constant: separation).isActive = true
+        }
     }
 }

@@ -1,3 +1,3 @@
-struct Code {
+public struct Code {
     
 }

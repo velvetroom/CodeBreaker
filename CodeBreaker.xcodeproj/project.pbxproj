@@ -18,6 +18,16 @@
 		200B2EE122185B1200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDD22185AEF00738347 /* libBreaker.a */; };
 		200B2EE222185B1800738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
 		201EB68F2218613600E4B33F /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EB68E2218613600E4B33F /* Terminal.swift */; };
+		2043E71B2219CD5100482FBC /* Breaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71A2219CD5100482FBC /* Breaker.swift */; };
+		2043E71C2219CD5100482FBC /* Breaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71A2219CD5100482FBC /* Breaker.swift */; };
+		2043E71E2219CF1200482FBC /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71D2219CF1200482FBC /* Mission.swift */; };
+		2043E71F2219CF1200482FBC /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71D2219CF1200482FBC /* Mission.swift */; };
+		2043E7212219D3BF00482FBC /* Codes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E7202219D3BF00482FBC /* Codes.swift */; };
+		2043E7222219D3BF00482FBC /* Codes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E7202219D3BF00482FBC /* Codes.swift */; };
+		2043E7242219D42500482FBC /* TestCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E7232219D42500482FBC /* TestCodes.swift */; };
+		2043E7262219D5A800482FBC /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E7252219D5A800482FBC /* Alphabet.swift */; };
+		2043E7272219D5A800482FBC /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E7252219D5A800482FBC /* Alphabet.swift */; };
+		2043E7292219D76A00482FBC /* TestAlphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E7282219D76A00482FBC /* TestAlphabet.swift */; };
 		20A7722622196102004F34AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722422196074004F34AC /* Node.swift */; };
 		20A7722822197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
 		20A7722922197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
@@ -88,6 +98,12 @@
 		201EB68C2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68D2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68E2218613600E4B33F /* Terminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
+		2043E71A2219CD5100482FBC /* Breaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breaker.swift; sourceTree = "<group>"; };
+		2043E71D2219CF1200482FBC /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		2043E7202219D3BF00482FBC /* Codes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codes.swift; sourceTree = "<group>"; };
+		2043E7232219D42500482FBC /* TestCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodes.swift; sourceTree = "<group>"; };
+		2043E7252219D5A800482FBC /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
+		2043E7282219D76A00482FBC /* TestAlphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlphabet.swift; sourceTree = "<group>"; };
 		20A7722422196074004F34AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		20A7722722197D87004F34AC /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		20A7722A22198006004F34AC /* Rookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rookie.swift; sourceTree = "<group>"; };
@@ -188,6 +204,8 @@
 			children = (
 				200B2EBD22184A6A00738347 /* Tests.plist */,
 				200B2EBE22184A6A00738347 /* TestPlayer.swift */,
+				2043E7232219D42500482FBC /* TestCodes.swift */,
+				2043E7282219D76A00482FBC /* TestAlphabet.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -196,11 +214,15 @@
 			isa = PBXGroup;
 			children = (
 				200B2EC222184A7500738347 /* Code.swift */,
+				2043E7202219D3BF00482FBC /* Codes.swift */,
 				20A77233221989A4004F34AC /* Player.swift */,
 				20A7722722197D87004F34AC /* Level.swift */,
 				20A7722A22198006004F34AC /* Rookie.swift */,
 				20A7722D22198028004F34AC /* Advanced.swift */,
 				20A7723022198036004F34AC /* Expert.swift */,
+				2043E71A2219CD5100482FBC /* Breaker.swift */,
+				2043E71D2219CF1200482FBC /* Mission.swift */,
+				2043E7252219D5A800482FBC /* Alphabet.swift */,
 			);
 			path = CodeBreaker;
 			sourceTree = "<group>";
@@ -399,9 +421,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A7723122198036004F34AC /* Expert.swift in Sources */,
+				2043E7212219D3BF00482FBC /* Codes.swift in Sources */,
 				20A7722822197D87004F34AC /* Level.swift in Sources */,
 				20A7722B22198006004F34AC /* Rookie.swift in Sources */,
 				200B2EC322184A7500738347 /* Code.swift in Sources */,
+				2043E71B2219CD5100482FBC /* Breaker.swift in Sources */,
+				2043E7262219D5A800482FBC /* Alphabet.swift in Sources */,
+				2043E71E2219CF1200482FBC /* Mission.swift in Sources */,
 				20A77234221989A4004F34AC /* Player.swift in Sources */,
 				20A7722E22198028004F34AC /* Advanced.swift in Sources */,
 			);
@@ -412,9 +438,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A7723222198036004F34AC /* Expert.swift in Sources */,
+				2043E7222219D3BF00482FBC /* Codes.swift in Sources */,
 				20A7722922197D87004F34AC /* Level.swift in Sources */,
 				20A7722C22198006004F34AC /* Rookie.swift in Sources */,
 				200B2EC522184A7500738347 /* Code.swift in Sources */,
+				2043E71C2219CD5100482FBC /* Breaker.swift in Sources */,
+				2043E7272219D5A800482FBC /* Alphabet.swift in Sources */,
+				2043E71F2219CF1200482FBC /* Mission.swift in Sources */,
 				20A77235221989A4004F34AC /* Player.swift in Sources */,
 				20A7722F22198028004F34AC /* Advanced.swift in Sources */,
 			);
@@ -424,6 +454,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2043E7242219D42500482FBC /* TestCodes.swift in Sources */,
+				2043E7292219D76A00482FBC /* TestAlphabet.swift in Sources */,
 				200B2EC022184A6A00738347 /* TestPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
