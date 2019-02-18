@@ -41,6 +41,11 @@
 		20A77234221989A4004F34AC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A77233221989A4004F34AC /* Player.swift */; };
 		20A77235221989A4004F34AC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A77233221989A4004F34AC /* Player.swift */; };
 		20A7723722199861004F34AC /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7723622199861004F34AC /* Gradient.swift */; };
+		20EFFEE0221A8D4C00929257 /* TestNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEDF221A8D4C00929257 /* TestNode.swift */; };
+		20EFFEE3221A8DA200929257 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE1221A8D9E00929257 /* Node.swift */; };
+		20EFFEE4221A8DA300929257 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE1221A8D9E00929257 /* Node.swift */; };
+		20EFFEE6221A8DD000929257 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE5221A8DD000929257 /* Vertex.swift */; };
+		20EFFEE7221A8DD000929257 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE5221A8DD000929257 /* Vertex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +118,9 @@
 		20A7723022198036004F34AC /* Expert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expert.swift; sourceTree = "<group>"; };
 		20A77233221989A4004F34AC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		20A7723622199861004F34AC /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		20EFFEDF221A8D4C00929257 /* TestNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNode.swift; sourceTree = "<group>"; };
+		20EFFEE1221A8D9E00929257 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		20EFFEE5221A8DD000929257 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +217,7 @@
 				2043E7232219D42500482FBC /* TestCodes.swift */,
 				2043E7282219D76A00482FBC /* TestAlphabet.swift */,
 				2043E72A2219E24900482FBC /* TestFactory.swift */,
+				20EFFEDF221A8D4C00929257 /* TestNode.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -226,6 +235,8 @@
 				2043E71D2219CF1200482FBC /* Mission.swift */,
 				2043E7252219D5A800482FBC /* Alphabet.swift */,
 				2043E72C2219E2A000482FBC /* Factory.swift */,
+				20EFFEE1221A8D9E00929257 /* Node.swift */,
+				20EFFEE5221A8DD000929257 /* Vertex.swift */,
 			);
 			path = CodeBreaker;
 			sourceTree = "<group>";
@@ -426,7 +437,9 @@
 				20A7723122198036004F34AC /* Expert.swift in Sources */,
 				2043E7212219D3BF00482FBC /* Codes.swift in Sources */,
 				2043E72D2219E2A000482FBC /* Factory.swift in Sources */,
+				20EFFEE3221A8DA200929257 /* Node.swift in Sources */,
 				20A7722822197D87004F34AC /* Level.swift in Sources */,
+				20EFFEE6221A8DD000929257 /* Vertex.swift in Sources */,
 				20A7722B22198006004F34AC /* Rookie.swift in Sources */,
 				2043E71B2219CD5100482FBC /* Breaker.swift in Sources */,
 				2043E7262219D5A800482FBC /* Alphabet.swift in Sources */,
@@ -443,7 +456,9 @@
 				20A7723222198036004F34AC /* Expert.swift in Sources */,
 				2043E7222219D3BF00482FBC /* Codes.swift in Sources */,
 				2043E72E2219E2A000482FBC /* Factory.swift in Sources */,
+				20EFFEE4221A8DA300929257 /* Node.swift in Sources */,
 				20A7722922197D87004F34AC /* Level.swift in Sources */,
+				20EFFEE7221A8DD000929257 /* Vertex.swift in Sources */,
 				20A7722C22198006004F34AC /* Rookie.swift in Sources */,
 				2043E71C2219CD5100482FBC /* Breaker.swift in Sources */,
 				2043E7272219D5A800482FBC /* Alphabet.swift in Sources */,
@@ -460,6 +475,7 @@
 				2043E72B2219E24900482FBC /* TestFactory.swift in Sources */,
 				2043E7242219D42500482FBC /* TestCodes.swift in Sources */,
 				2043E7292219D76A00482FBC /* TestAlphabet.swift in Sources */,
+				20EFFEE0221A8D4C00929257 /* TestNode.swift in Sources */,
 				200B2EC022184A6A00738347 /* TestPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
