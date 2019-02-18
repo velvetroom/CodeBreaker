@@ -46,6 +46,9 @@
 		20EFFEE4221A8DA300929257 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE1221A8D9E00929257 /* Node.swift */; };
 		20EFFEE6221A8DD000929257 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE5221A8DD000929257 /* Vertex.swift */; };
 		20EFFEE7221A8DD000929257 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE5221A8DD000929257 /* Vertex.swift */; };
+		20EFFEE9221A969200929257 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE8221A969200929257 /* Graph.swift */; };
+		20EFFEEA221A969200929257 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE8221A969200929257 /* Graph.swift */; };
+		20EFFEEC221A974100929257 /* TestGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEEB221A974100929257 /* TestGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +124,8 @@
 		20EFFEDF221A8D4C00929257 /* TestNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNode.swift; sourceTree = "<group>"; };
 		20EFFEE1221A8D9E00929257 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		20EFFEE5221A8DD000929257 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		20EFFEE8221A969200929257 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		20EFFEEB221A974100929257 /* TestGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +223,7 @@
 				2043E7282219D76A00482FBC /* TestAlphabet.swift */,
 				2043E72A2219E24900482FBC /* TestFactory.swift */,
 				20EFFEDF221A8D4C00929257 /* TestNode.swift */,
+				20EFFEEB221A974100929257 /* TestGraph.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 				2043E72C2219E2A000482FBC /* Factory.swift */,
 				20EFFEE1221A8D9E00929257 /* Node.swift */,
 				20EFFEE5221A8DD000929257 /* Vertex.swift */,
+				20EFFEE8221A969200929257 /* Graph.swift */,
 			);
 			path = CodeBreaker;
 			sourceTree = "<group>";
@@ -435,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A7723122198036004F34AC /* Expert.swift in Sources */,
+				20EFFEE9221A969200929257 /* Graph.swift in Sources */,
 				2043E7212219D3BF00482FBC /* Codes.swift in Sources */,
 				2043E72D2219E2A000482FBC /* Factory.swift in Sources */,
 				20EFFEE3221A8DA200929257 /* Node.swift in Sources */,
@@ -454,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A7723222198036004F34AC /* Expert.swift in Sources */,
+				20EFFEEA221A969200929257 /* Graph.swift in Sources */,
 				2043E7222219D3BF00482FBC /* Codes.swift in Sources */,
 				2043E72E2219E2A000482FBC /* Factory.swift in Sources */,
 				20EFFEE4221A8DA300929257 /* Node.swift in Sources */,
@@ -474,6 +483,7 @@
 			files = (
 				2043E72B2219E24900482FBC /* TestFactory.swift in Sources */,
 				2043E7242219D42500482FBC /* TestCodes.swift in Sources */,
+				20EFFEEC221A974100929257 /* TestGraph.swift in Sources */,
 				2043E7292219D76A00482FBC /* TestAlphabet.swift in Sources */,
 				20EFFEE0221A8D4C00929257 /* TestNode.swift in Sources */,
 				200B2EC022184A6A00738347 /* TestPlayer.swift in Sources */,

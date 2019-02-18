@@ -1,7 +1,4 @@
 class Vertex {
-    let input: Int
-    
-    init(_ input: Int) {
-        self.input = input
-    }
+    var input = Int()
+    let node = Node()
 }
