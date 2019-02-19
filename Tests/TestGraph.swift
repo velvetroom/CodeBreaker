@@ -3,13 +3,13 @@ import XCTest
 
 class TestGraph: XCTestCase {
     func test1Node() {
-        let graph = Graph("a")
+        let graph = Graph("a", level:Rookie())
         XCTAssertEqual("a", graph.node.value)
         XCTAssertTrue(graph.node.vertex.isEmpty)
     }
     
     func test2Nodes() {
-        let graph = Graph("ab")
+        let graph = Graph("ab", level:Rookie())
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(1, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -17,8 +17,18 @@ class TestGraph: XCTestCase {
         XCTAssertTrue(graph.node.vertex.first!.input == 0 || graph.node.vertex.first!.input == 1)
     }
     
-    func test3Nodes() {
-        let graph = Graph("abc")
+    func test3NodesRookie() {
+        let graph = Graph("abc", level:Rookie())
+        XCTAssertEqual("a", graph.node.value)
+//        XCTAssertEqual(1, graph.node.vertex.count)
+//        XCTAssertEqual("b", graph.node.vertex.first!.node.value)
+//        XCTAssertEqual(1, graph.node.vertex.first!.node.vertex.count)
+//        XCTAssertEqual("c", graph.node.vertex.first!.node.vertex.first!.node.value)
+//        XCTAssertTrue(graph.node.vertex.first!.node.vertex.first!.node.vertex.isEmpty)
+    }
+    
+    func test3NodesAdvanced() {
+        let graph = Graph("abc", level:Advanced())
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -28,8 +38,8 @@ class TestGraph: XCTestCase {
         XCTAssertNotEqual(graph.node.vertex.first!.input, graph.node.vertex.last!.input)
     }
     
-    func test4Nodes() {
-        let graph = Graph("abcd")
+    func test4NodesAdvanced() {
+        let graph = Graph("abcd", level:Advanced())
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -40,8 +50,8 @@ class TestGraph: XCTestCase {
         XCTAssertNotEqual(graph.node.vertex.first!.input, graph.node.vertex.last!.input)
     }
     
-    func test5Nodes() {
-        let graph = Graph("abcde")
+    func test5NodesAdvanced() {
+        let graph = Graph("abcde", level:Advanced())
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -54,8 +64,8 @@ class TestGraph: XCTestCase {
         XCTAssertNotEqual(graph.node.vertex.first!.node.vertex.first!.input, graph.node.vertex.first!.node.vertex.last!.input)
     }
     
-    func test6Nodes() {
-        let graph = Graph("abcdef")
+    func test6NodesAdvanced() {
+        let graph = Graph("abcdef", level:Advanced())
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -68,8 +78,8 @@ class TestGraph: XCTestCase {
         XCTAssertNotEqual(graph.node.vertex.first!.node.vertex.first!.input, graph.node.vertex.first!.node.vertex.last!.input)
     }
     
-    func test7Nodes() {
-        let graph = Graph("abcdefg")
+    func test7NodesAdvanced() {
+        let graph = Graph("abcdefg", level:Advanced())
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -84,8 +94,8 @@ class TestGraph: XCTestCase {
         XCTAssertNotEqual(graph.node.vertex.last!.node.vertex.first!.input, graph.node.vertex.last!.node.vertex.last!.input)
     }
     
-    func test8Nodes() {
-        let graph = Graph("abcdefgh")
+    func test8NodesAdvanced() {
+        let graph = Graph("abcdefgh", level:Advanced())
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
