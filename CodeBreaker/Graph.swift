@@ -1,12 +1,13 @@
 class Graph {
     let node = Node()
     
-    func add(_ state: String) {
-        assert(state.count == 1)
-        if node.value.isEmpty {
-            node.value = state
-        } else {
-            node.add(state)
+    init(_ message: String) {
+        message.map( { String($0) } ).forEach {
+            if node.value.isEmpty {
+                node.value = $0
+            } else {
+                node.add($0)
+            }
         }
     }
 }

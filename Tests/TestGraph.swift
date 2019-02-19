@@ -2,21 +2,14 @@ import XCTest
 @testable import Breaker
 
 class TestGraph: XCTestCase {
-    private var graph: Graph!
-    
-    override func setUp() {
-        graph = Graph()
-    }
-    
     func test1Node() {
-        graph.add("a")
+        let graph = Graph("a")
         XCTAssertEqual("a", graph.node.value)
         XCTAssertTrue(graph.node.vertex.isEmpty)
     }
     
     func test2Nodes() {
-        graph.add("a")
-        graph.add("b")
+        let graph = Graph("ab")
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(1, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -25,9 +18,7 @@ class TestGraph: XCTestCase {
     }
     
     func test3Nodes() {
-        graph.add("a")
-        graph.add("b")
-        graph.add("c")
+        let graph = Graph("abc")
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -38,10 +29,7 @@ class TestGraph: XCTestCase {
     }
     
     func test4Nodes() {
-        graph.add("a")
-        graph.add("b")
-        graph.add("c")
-        graph.add("d")
+        let graph = Graph("abcd")
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -53,11 +41,7 @@ class TestGraph: XCTestCase {
     }
     
     func test5Nodes() {
-        graph.add("a")
-        graph.add("b")
-        graph.add("c")
-        graph.add("d")
-        graph.add("e")
+        let graph = Graph("abcde")
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -71,12 +55,7 @@ class TestGraph: XCTestCase {
     }
     
     func test6Nodes() {
-        graph.add("a")
-        graph.add("b")
-        graph.add("c")
-        graph.add("d")
-        graph.add("e")
-        graph.add("f")
+        let graph = Graph("abcdef")
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -90,13 +69,7 @@ class TestGraph: XCTestCase {
     }
     
     func test7Nodes() {
-        graph.add("a")
-        graph.add("b")
-        graph.add("c")
-        graph.add("d")
-        graph.add("e")
-        graph.add("f")
-        graph.add("g")
+        let graph = Graph("abcdefg")
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
@@ -112,14 +85,7 @@ class TestGraph: XCTestCase {
     }
     
     func test8Nodes() {
-        graph.add("a")
-        graph.add("b")
-        graph.add("c")
-        graph.add("d")
-        graph.add("e")
-        graph.add("f")
-        graph.add("g")
-        graph.add("h")
+        let graph = Graph("abcdefgh")
         XCTAssertEqual("a", graph.node.value)
         XCTAssertEqual(2, graph.node.vertex.count)
         XCTAssertEqual("b", graph.node.vertex.first!.node.value)
