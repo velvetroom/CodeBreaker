@@ -1,9 +1,9 @@
 class Node {
     let vertex: [Vertex]
-    let value: String
+    let state: String
     
     init(_ state: String, size: Int) {
-        value = state
-        vertex = { size > 1 ? (0 ..< size).map({ Vertex($0) }).shuffled() : [Vertex()] } ()
+        vertex = { size > 1 ? (0 ..< size).map({ Vertex(input: $0) }).shuffled() : [Vertex()] } ()
+        self.state = state
     }
 }
