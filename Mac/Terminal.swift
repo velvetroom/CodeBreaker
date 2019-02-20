@@ -20,19 +20,17 @@ class Terminal: NSScrollView {
     
     required init?(coder: NSCoder) { return nil }
     
-    func prepare(_ length: Int) {
+    func render(_ mission: Mission) {
         documentView!.subviews.forEach { $0.removeFromSuperview() }
-        (1 ... length).forEach { add(CGFloat($0)) }
-    }
-    
-    private func add(_ x: CGFloat) {
-        Breaker.shared.player.level.lanes.forEach {
-            let node = Node()
-            documentView!.addSubview(node)
-            
-            node.leftAnchor.constraint(equalTo: leftAnchor, constant: separation * x).isActive = true
-            node.centerYAnchor.constraint(equalTo: centerYAnchor, constant: separation * CGFloat($0)).isActive = true
-            documentView!.rightAnchor.constraint(greaterThanOrEqualTo: node.rightAnchor, constant: separation).isActive = true
+        (1 ... mission.horizontal).forEach { x in
+            (0 ..< mission.vertical).forEach { y in
+                let node = Node()
+                documentView!.addSubview(node)
+                
+                node.leftAnchor.constraint(equalTo: leftAnchor, constant: separation * CGFloat(x)).isActive = true
+                node.centerYAnchor.constraint(equalTo: centerYAnchor, constant: separation * CGFloat(y)).isActive = true
+                documentView!.rightAnchor.constraint(greaterThanOrEqualTo: node.rightAnchor, constant: separation).isActive = true
+            }
         }
     }
 }

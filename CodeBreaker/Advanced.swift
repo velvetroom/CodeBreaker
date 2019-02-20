@@ -1,5 +1,4 @@
-public class Advanced: Level {
-    public let lanes = [0, -1]
-    
-    public required init() { }
+class Advanced: Level {
+    let lanes = [0, -1]
+    required init() { }
 }

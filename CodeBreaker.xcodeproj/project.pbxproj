@@ -205,9 +205,9 @@
 				200B2EB722184A5E00738347 /* Mac.plist */,
 				200B2EB622184A5E00738347 /* Mac.storyboard */,
 				200B2EB822184A5E00738347 /* App.swift */,
-				201EB68E2218613600E4B33F /* Terminal.swift */,
 				20A7723622199861004F34AC /* Gradient.swift */,
 				20A7722422196074004F34AC /* Node.swift */,
+				201EB68E2218613600E4B33F /* Terminal.swift */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -216,11 +216,11 @@
 			isa = PBXGroup;
 			children = (
 				200B2EBD22184A6A00738347 /* Tests.plist */,
-				200B2EBE22184A6A00738347 /* TestPlayer.swift */,
-				2043E7232219D42500482FBC /* TestCodes.swift */,
 				2043E7282219D76A00482FBC /* TestAlphabet.swift */,
+				2043E7232219D42500482FBC /* TestCodes.swift */,
 				2043E72A2219E24900482FBC /* TestFactory.swift */,
 				20EFFEEB221A974100929257 /* TestGraph.swift */,
+				200B2EBE22184A6A00738347 /* TestPlayer.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -228,19 +228,19 @@
 		200B2EC122184A7500738347 /* CodeBreaker */ = {
 			isa = PBXGroup;
 			children = (
-				2043E7202219D3BF00482FBC /* Codes.swift */,
-				20A77233221989A4004F34AC /* Player.swift */,
-				20A7722722197D87004F34AC /* Level.swift */,
-				20A7722A22198006004F34AC /* Rookie.swift */,
 				20A7722D22198028004F34AC /* Advanced.swift */,
-				20A7723022198036004F34AC /* Expert.swift */,
-				2043E71A2219CD5100482FBC /* Breaker.swift */,
-				2043E71D2219CF1200482FBC /* Mission.swift */,
 				2043E7252219D5A800482FBC /* Alphabet.swift */,
+				2043E71A2219CD5100482FBC /* Breaker.swift */,
+				2043E7202219D3BF00482FBC /* Codes.swift */,
+				20A7723022198036004F34AC /* Expert.swift */,
 				2043E72C2219E2A000482FBC /* Factory.swift */,
-				20EFFEE1221A8D9E00929257 /* Node.swift */,
-				20EFFEE5221A8DD000929257 /* Vertex.swift */,
 				20EFFEE8221A969200929257 /* Graph.swift */,
+				20A7722722197D87004F34AC /* Level.swift */,
+				2043E71D2219CF1200482FBC /* Mission.swift */,
+				20EFFEE1221A8D9E00929257 /* Node.swift */,
+				20A77233221989A4004F34AC /* Player.swift */,
+				20A7722A22198006004F34AC /* Rookie.swift */,
+				20EFFEE5221A8DD000929257 /* Vertex.swift */,
 			);
 			path = CodeBreaker;
 			sourceTree = "<group>";

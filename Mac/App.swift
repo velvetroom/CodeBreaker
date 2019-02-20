@@ -1,4 +1,5 @@
 import AppKit
+import Breaker
 
 @NSApplicationMain class App: NSWindow, NSApplicationDelegate {
     static private(set) weak var shared: App!
@@ -39,6 +40,6 @@ import AppKit
         gradientRight.bottomAnchor.constraint(equalTo: contentView!.bottomAnchor).isActive = true
         gradientRight.rightAnchor.constraint(equalTo: contentView!.rightAnchor).isActive = true
         
-        terminal.prepare(10)
+        terminal.render(Breaker.shared.mission)
     }
 }

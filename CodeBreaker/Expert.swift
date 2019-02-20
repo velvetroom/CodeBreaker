@@ -1,5 +1,4 @@
-public class Expert: Level {
-    public let lanes = [0, 1, -1]
-    
-    public required init() { }
+class Expert: Level {
+    let lanes = [0, 1, -1]
+    required init() { }
 }

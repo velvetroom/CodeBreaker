@@ -1,5 +1,4 @@
-public class Rookie: Level {
-    public let lanes = [0]
-    
-    public required init() { }
+class Rookie: Level {
+    let lanes = [0]
+    required init() { }
 }
