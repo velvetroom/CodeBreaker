@@ -41,7 +41,6 @@
 		20A77234221989A4004F34AC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A77233221989A4004F34AC /* Player.swift */; };
 		20A77235221989A4004F34AC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A77233221989A4004F34AC /* Player.swift */; };
 		20A7723722199861004F34AC /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7723622199861004F34AC /* Gradient.swift */; };
-		20EFFEE0221A8D4C00929257 /* TestNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEDF221A8D4C00929257 /* TestNode.swift */; };
 		20EFFEE3221A8DA200929257 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE1221A8D9E00929257 /* Node.swift */; };
 		20EFFEE4221A8DA300929257 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE1221A8D9E00929257 /* Node.swift */; };
 		20EFFEE6221A8DD000929257 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EFFEE5221A8DD000929257 /* Vertex.swift */; };
@@ -121,7 +120,6 @@
 		20A7723022198036004F34AC /* Expert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expert.swift; sourceTree = "<group>"; };
 		20A77233221989A4004F34AC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		20A7723622199861004F34AC /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
-		20EFFEDF221A8D4C00929257 /* TestNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNode.swift; sourceTree = "<group>"; };
 		20EFFEE1221A8D9E00929257 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		20EFFEE5221A8DD000929257 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		20EFFEE8221A969200929257 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 				2043E7232219D42500482FBC /* TestCodes.swift */,
 				2043E7282219D76A00482FBC /* TestAlphabet.swift */,
 				2043E72A2219E24900482FBC /* TestFactory.swift */,
-				20EFFEDF221A8D4C00929257 /* TestNode.swift */,
 				20EFFEEB221A974100929257 /* TestGraph.swift */,
 			);
 			path = Tests;
@@ -485,7 +482,6 @@
 				2043E7242219D42500482FBC /* TestCodes.swift in Sources */,
 				20EFFEEC221A974100929257 /* TestGraph.swift in Sources */,
 				2043E7292219D76A00482FBC /* TestAlphabet.swift in Sources */,
-				20EFFEE0221A8D4C00929257 /* TestNode.swift in Sources */,
 				200B2EC022184A6A00738347 /* TestPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

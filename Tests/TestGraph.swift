@@ -101,4 +101,20 @@ class TestGraph: XCTestCase {
         XCTAssertTrue(graph.route[2].node === graph.route[3].node)
         XCTAssertEqual(4, graph.route.count)
     }
+    
+    func testAAAAExpert() {
+        let graph = Graph("aaab", level: Expert())
+        XCTAssertEqual("a", graph.route[0].node?.state)
+        XCTAssertEqual("a", graph.route[1].node?.state)
+        XCTAssertEqual("a", graph.route[2].node?.state)
+        XCTAssertEqual("b", graph.route[3].node?.state)
+        XCTAssertTrue(graph.route[0].node === graph.route[1].node)
+        XCTAssertTrue(graph.route[1].node !== graph.route[2].node)
+        XCTAssertEqual(4, graph.route.count)
+    }
+    
+    func testCode() {
+        let graph = Graph("lorem ipsum hello world", level: Expert())
+        graph.code.enumerated().forEach { XCTAssertEqual(graph.route[$0.0 + 1].input, $0.1) }
+    }
 }
