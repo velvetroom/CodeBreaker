@@ -1,15 +1,18 @@
 import AppKit
 
-class Node: NSView {
-    enum State {
-        case none
-        case set
-        case connected
-        case start
-    }
-    
-    private(set) var state = State.none { didSet { update() } }
-    private weak var field: NSTextField!
+protocol State {
+    func update(_: Node!)
+    func click(_: Node!)
+    func stop(_: Node!)
+}
+
+extension State {
+    func stop(_: Node!) { }
+}
+
+class Node: NSView, State {
+    fileprivate var state:State! { didSet { state.update(self) } }
+    private weak var emoji: Emoji!
     
     init() {
         super.init(frame: .zero)
@@ -20,45 +23,56 @@ class Node: NSView {
         } (CAShapeLayer())
         wantsLayer = true
         
-        let field = NSTextField()
-        field.translatesAutoresizingMaskIntoConstraints = false
-        field.alignment = .center
-        field.font = .systemFont(ofSize: 35)
-        field.backgroundColor = .clear
-        field.isBezeled = false
-        field.isEditable = false
-        addSubview(field)
-        self.field = field
+        let emoji = Emoji()
+        addSubview(emoji)
+        self.emoji = emoji
         
         widthAnchor.constraint(equalToConstant: 60).isActive = true
         heightAnchor.constraint(equalToConstant: 60).isActive = true
         
-        field.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        field.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        
-        update()
+        emoji.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        emoji.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        DispatchQueue.main.async { [weak self] in self?.state = None() }
     }
     
     required init?(coder: NSCoder) { return nil }
+    func update(_: Node! = nil) { state.update(self) }
+    func click(_: Node! = nil) { state.click(self) }
+    func stop(_: Node! = nil) { state.stop(self) }
+}
+
+private class None: State {
+    fileprivate func update(_ node: Node!) {
+        (node.layer as! CAShapeLayer).lineWidth = 0
+        (node.layer as! CAShapeLayer).strokeColor = NSColor.clear.cgColor
+        (node.layer as! CAShapeLayer).fillColor = NSColor(white: 1, alpha: 0.25).cgColor
+    }
     
-    private func update() {
-        switch state {
-        case .none:
-            (layer as! CAShapeLayer).lineWidth = 0
-            (layer as! CAShapeLayer).strokeColor = NSColor.clear.cgColor
-            (layer as! CAShapeLayer).fillColor = NSColor(white: 1, alpha: 0.3).cgColor
-        case .set:
-            (layer as! CAShapeLayer).lineWidth = 3
-            (layer as! CAShapeLayer).strokeColor = NSColor.white.cgColor
-            (layer as! CAShapeLayer).fillColor = NSColor(white: 1, alpha: 0.1).cgColor
-        case .connected:
-            (layer as! CAShapeLayer).lineWidth = 3
-            (layer as! CAShapeLayer).strokeColor = NSColor.white.cgColor
-            (layer as! CAShapeLayer).fillColor = NSColor(white: 1, alpha: 0.1).cgColor
-        case .start:
-            (layer as! CAShapeLayer).lineWidth = 3
-            (layer as! CAShapeLayer).strokeColor = NSColor.white.cgColor
-            (layer as! CAShapeLayer).fillColor = NSColor(white: 1, alpha: 0.1).cgColor
-        }
+    fileprivate func click(_ node: Node!) { node.state = Edit() }
+}
+
+private class Edit: State {
+    fileprivate func update(_ node: Node!) {
+        (node.layer as! CAShapeLayer).lineWidth = 1
+        (node.layer as! CAShapeLayer).strokeColor = NSColor.white.cgColor
+        (node.layer as! CAShapeLayer).fillColor = NSColor(white: 1, alpha: 0.7).cgColor
+    }
+    
+    fileprivate func click(_ node: Node!) {
+        
+    }
+    
+    fileprivate func stop(_ node: Node!) { node.state = None() }
+}
+
+private class Code: State {
+    fileprivate func update(_ node: Node!) {
+        (node.layer as! CAShapeLayer).lineWidth = 3
+        (node.layer as! CAShapeLayer).strokeColor = NSColor.white.cgColor
+        (node.layer as! CAShapeLayer).fillColor = NSColor(white: 1, alpha: 0.1).cgColor
+    }
+    
+    fileprivate func click(_ node: Node!) {
+        
     }
 }
