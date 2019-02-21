@@ -48,7 +48,10 @@ private class None: State {
         (node.layer as! CAShapeLayer).fillColor = NSColor(white: 1, alpha: 0.25).cgColor
     }
     
-    fileprivate func click(_ node: Node!) { node.state = Edit() }
+    fileprivate func click(_ node: Node!) {
+        node.state = Edit()
+        Alphabet(node)
+    }
 }
 
 private class Edit: State {
