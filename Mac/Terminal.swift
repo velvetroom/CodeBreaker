@@ -2,10 +2,11 @@ import AppKit
 import Breaker
 
 class Terminal: NSScrollView {
-    static let shared = Terminal()
+    private let mission: Mission
     private let separation = CGFloat(100)
     
-    private init() {
+    init(_ mission: Mission) {
+        self.mission = mission
         super.init(frame: .zero)
         drawsBackground = false
         translatesAutoresizingMaskIntoConstraints = false
@@ -16,12 +17,7 @@ class Terminal: NSScrollView {
         documentView!.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         documentView!.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         documentView!.rightAnchor.constraint(greaterThanOrEqualTo: rightAnchor).isActive = true
-    }
-    
-    required init?(coder: NSCoder) { return nil }
-    
-    func render(_ mission: Mission) {
-        documentView!.subviews.forEach { $0.removeFromSuperview() }
+        
         (1 ... mission.horizontal).forEach { x in
             (0 ..< mission.vertical).forEach { y in
                 let node = Node()
@@ -33,4 +29,6 @@ class Terminal: NSScrollView {
             }
         }
     }
+    
+    required init?(coder: NSCoder) { return nil }
 }

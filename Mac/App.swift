@@ -19,7 +19,7 @@ import Breaker
     }
     
     private func outlets() {
-        let terminal = Terminal.shared
+        let terminal = Terminal(Breaker.shared.mission)
         let gradientLeft = Gradient([NSColor.black.cgColor, NSColor(white:0, alpha:0).cgColor])
         let gradientRight = Gradient([NSColor(white:0, alpha:0).cgColor, NSColor.black.cgColor])
         
@@ -39,7 +39,5 @@ import Breaker
         gradientRight.topAnchor.constraint(equalTo: contentView!.topAnchor).isActive = true
         gradientRight.bottomAnchor.constraint(equalTo: contentView!.bottomAnchor).isActive = true
         gradientRight.rightAnchor.constraint(equalTo: contentView!.rightAnchor).isActive = true
-        
-        terminal.render(Breaker.shared.mission)
     }
 }
