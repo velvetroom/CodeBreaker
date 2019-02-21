@@ -2,8 +2,8 @@ import AppKit
 import Breaker
 
 class Terminal: NSScrollView {
+    let mission: Mission
     private weak var dragging: NSView?
-    private let mission: Mission
     private let separation = CGFloat(100)
     
     init(_ mission: Mission) {

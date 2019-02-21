@@ -3,6 +3,7 @@ import Breaker
 
 @NSApplicationMain class App: NSWindow, NSApplicationDelegate {
     static private(set) weak var shared: App!
+    private(set) weak var terminal: Terminal?
     
     func applicationShouldTerminateAfterLastWindowClosed(_: NSApplication) -> Bool { return true }
     override func cancelOperation(_: Any?) { makeFirstResponder(nil) }
@@ -22,6 +23,7 @@ import Breaker
         let terminal = Terminal(Breaker.shared.mission)
         let gradientLeft = Gradient([NSColor.black.cgColor, NSColor(white:0, alpha:0).cgColor])
         let gradientRight = Gradient([NSColor(white:0, alpha:0).cgColor, NSColor.black.cgColor])
+        self.terminal = terminal
         
         contentView!.addSubview(terminal)
         contentView!.addSubview(gradientLeft)
