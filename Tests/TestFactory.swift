@@ -6,14 +6,28 @@ class TestFactory: XCTestCase {
         XCTAssertEqual(Codes.list[0], Factory.mission(Player()).text)
     }
     
-    func testAssignText() {
+    func testText() {
         let player = Player()
         player.code = 0
         XCTAssertEqual("hello world", Factory.mission(player).text)
     }
     
-    func testAssignCypher() {
+    func testCypher() {
         XCTAssertEqual(Alphabet.map["h"]! + Alphabet.map["i"]!, Factory.mission(Player()).cypher)
+    }
+    
+    func testAlphabet() {
+        XCTAssertEqual(Alphabet.map["h"], Factory.mission(Player()).alphabet[0])
+        XCTAssertEqual(Alphabet.map["i"], Factory.mission(Player()).alphabet[1])
+    }
+    
+    func testAlphabetNotRepeating() {
+        let player = Player()
+        player.code = 0
+        let alphabet = Factory.mission(player).alphabet
+        XCTAssertEqual(8, alphabet.count)
+        XCTAssertEqual(1, alphabet.filter({ $0 == Alphabet.map["l"] }).count)
+        XCTAssertEqual(1, alphabet.filter({ $0 == Alphabet.map["o"] }).count)
     }
     
     func testCode2States() {
