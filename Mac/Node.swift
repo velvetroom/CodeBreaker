@@ -56,7 +56,7 @@ class Node: NSView, State {
         close!.removeFromSuperview()
         emoji.stringValue = String()
         App.shared.terminal!.layer!.sublayers!.compactMap({ $0 as? Vertex })
-            .filter({ $0.origin === self || $0.destination === self }).forEach { $0.removeFromSuperlayer() }
+            .filter({ $0.origin === self || $0.destination === self }).forEach { $0.clear() }
         state = None()
     }
 }

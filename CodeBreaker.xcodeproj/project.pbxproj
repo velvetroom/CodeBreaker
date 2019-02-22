@@ -32,6 +32,7 @@
 		2043E72E2219E2A000482FBC /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72C2219E2A000482FBC /* Factory.swift */; };
 		209E943E221FE1C0008BB79A /* Mac.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209E943D221FE1C0008BB79A /* Mac.xcassets */; };
 		209E9440221FF05C008BB79A /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E943F221FF05C008BB79A /* Vertex.swift */; };
+		209E944222201B1C008BB79A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E944122201B1C008BB79A /* Input.swift */; };
 		20A7722622196102004F34AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722422196074004F34AC /* Node.swift */; };
 		20A7722822197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
 		20A7722922197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
@@ -132,6 +133,7 @@
 		2043E72C2219E2A000482FBC /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		209E943D221FE1C0008BB79A /* Mac.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mac.xcassets; sourceTree = "<group>"; };
 		209E943F221FF05C008BB79A /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		209E944122201B1C008BB79A /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		20A7722422196074004F34AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		20A7722722197D87004F34AC /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		20A7722A22198006004F34AC /* Rookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rookie.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				20D70E25221EB41C0080A180 /* Sheet.swift */,
 				201EB68E2218613600E4B33F /* Terminal.swift */,
 				209E943F221FF05C008BB79A /* Vertex.swift */,
+				209E944122201B1C008BB79A /* Input.swift */,
 				209E943D221FE1C0008BB79A /* Mac.xcassets */,
 			);
 			path = Mac;
@@ -556,6 +559,7 @@
 				20A7723722199861004F34AC /* Gradient.swift in Sources */,
 				200B2EBB22184A5E00738347 /* App.swift in Sources */,
 				201EB68F2218613600E4B33F /* Terminal.swift in Sources */,
+				209E944222201B1C008BB79A /* Input.swift in Sources */,
 				20D70E26221EB41C0080A180 /* Sheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

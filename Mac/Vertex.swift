@@ -2,6 +2,7 @@ import AppKit
 
 class Vertex: CAShapeLayer {
     weak var prospect: Node? { willSet { prospect?.stop() } didSet { prospect?.drag() } }
+    private(set) weak var input: Input?
     private(set) weak var destination: Node?
     private(set) weak var origin: Node!
     
@@ -28,6 +29,11 @@ class Vertex: CAShapeLayer {
         prospect == nil ? remove() : add()
     }
     
+    func clear() {
+        removeFromSuperlayer()
+        input?.removeFromSuperview()
+    }
+    
     private func remove() {
         add({
             $0.toValue = {
@@ -40,7 +46,7 @@ class Vertex: CAShapeLayer {
             $0.duration = 0.4
             return $0
         } (CABasicAnimation(keyPath: "path")), forKey: nil)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in self?.removeFromSuperlayer() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in self?.clear() }
     }
     
     private func add() {
@@ -51,5 +57,25 @@ class Vertex: CAShapeLayer {
             $0.addLine(to: CGPoint(x: destination!.frame.midX, y: destination!.frame.midY))
             return $0
         } (CGMutablePath())
+        let input = Input(App.shared.terminal!.layer!.sublayers!.compactMap({ $0 as? Vertex })
+            .filter({ $0.origin === origin && $0 !== self }).reduce(0, { Int($1.input!.field.stringValue) == 0 ? 1 : 0 }))
+        App.shared.terminal!.documentView!.addSubview(input)
+        self.input = input
+        
+        if origin.frame.midX == destination!.frame.midX {
+            input.centerXAnchor.constraint(equalTo: origin.centerXAnchor).isActive = true
+        } else if origin.frame.midX > destination!.frame.midX {
+            input.rightAnchor.constraint(equalTo: origin.leftAnchor).isActive = true
+        } else {
+            input.leftAnchor.constraint(equalTo: origin.rightAnchor).isActive = true
+        }
+        
+        if origin.frame.midY == destination!.frame.midY {
+            input.centerYAnchor.constraint(equalTo: origin.centerYAnchor).isActive = true
+        } else if origin.frame.midY > destination!.frame.midY {
+            input.topAnchor.constraint(equalTo: origin.bottomAnchor).isActive = true
+        } else {
+            input.bottomAnchor.constraint(equalTo: origin.topAnchor).isActive = true
+        }
     }
 }
