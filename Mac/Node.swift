@@ -8,6 +8,7 @@ protocol State {
 }
 
 extension State {
+    func click(_: Node!) { }
     func stop(_: Node!) { }
     func select(_: Emoji, _: Node! = nil) { }
 }
@@ -15,6 +16,7 @@ extension State {
 class Node: NSView, State {
     fileprivate var state:State! { didSet { state.update(self) } }
     fileprivate weak var emoji: Emoji!
+    fileprivate weak var close: NSButton!
     
     init() {
         super.init(frame: .zero)
@@ -29,11 +31,26 @@ class Node: NSView, State {
         addSubview(emoji)
         self.emoji = emoji
         
+        let close = NSButton()
+        close.translatesAutoresizingMaskIntoConstraints = false
+        close.image = NSImage(named: "close")
+        close.setButtonType(.momentaryChange)
+        close.imageScaling = .scaleNone
+        close.isBordered = false
+        addSubview(close)
+        self.close = close
+        
         widthAnchor.constraint(equalToConstant: 60).isActive = true
         heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         emoji.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         emoji.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+        close.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        close.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        close.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        close.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        
         DispatchQueue.main.async { [weak self] in self?.state = None() }
     }
     
@@ -62,10 +79,6 @@ private class Edit: State {
         (node.layer as! CAShapeLayer).lineWidth = 1
         (node.layer as! CAShapeLayer).strokeColor = NSColor.white.cgColor
         (node.layer as! CAShapeLayer).fillColor = NSColor(white: 1, alpha: 0.7).cgColor
-    }
-    
-    fileprivate func click(_ node: Node!) {
-        
     }
     
     fileprivate func stop(_ node: Node!) {

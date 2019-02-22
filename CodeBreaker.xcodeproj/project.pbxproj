@@ -30,6 +30,7 @@
 		2043E72B2219E24900482FBC /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72A2219E24900482FBC /* TestFactory.swift */; };
 		2043E72D2219E2A000482FBC /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72C2219E2A000482FBC /* Factory.swift */; };
 		2043E72E2219E2A000482FBC /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72C2219E2A000482FBC /* Factory.swift */; };
+		209E943E221FE1C0008BB79A /* Mac.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209E943D221FE1C0008BB79A /* Mac.xcassets */; };
 		20A7722622196102004F34AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722422196074004F34AC /* Node.swift */; };
 		20A7722822197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
 		20A7722922197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
@@ -128,6 +129,7 @@
 		2043E7282219D76A00482FBC /* TestAlphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlphabet.swift; sourceTree = "<group>"; };
 		2043E72A2219E24900482FBC /* TestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactory.swift; sourceTree = "<group>"; };
 		2043E72C2219E2A000482FBC /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		209E943D221FE1C0008BB79A /* Mac.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mac.xcassets; sourceTree = "<group>"; };
 		20A7722422196074004F34AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		20A7722722197D87004F34AC /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		20A7722A22198006004F34AC /* Rookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rookie.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				20D70E25221EB41C0080A180 /* Sheet.swift */,
 				201EB68E2218613600E4B33F /* Terminal.swift */,
 				20D329BE221ECFE9006E48AD /* Link.swift */,
+				209E943D221FE1C0008BB79A /* Mac.xcassets */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D329CA221ED291006E48AD /* SFMono-Light.otf in Resources */,
+				209E943E221FE1C0008BB79A /* Mac.xcassets in Resources */,
 				200B2EB922184A5E00738347 /* Mac.storyboard in Resources */,
 				20D329CC221ED291006E48AD /* SFMono-Bold.otf in Resources */,
 				20D329C5221ED1BA006E48AD /* Localizable.strings in Resources */,
