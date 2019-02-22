@@ -74,4 +74,14 @@ class TestFactory: XCTestCase {
         player.level = Expert()
         XCTAssertEqual(3, Factory.mission(player).vertical)
     }
+    
+    func testSize() {
+        let player = Player()
+        player.level = Rookie()
+        XCTAssertEqual(1, Factory.mission(player).size)
+        player.level = Advanced()
+        XCTAssertEqual(2, Factory.mission(player).size)
+        player.level = Expert()
+        XCTAssertEqual(2, Factory.mission(player).size)
+    }
 }

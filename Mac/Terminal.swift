@@ -3,7 +3,7 @@ import Breaker
 
 class Terminal: NSScrollView {
     let mission: Mission
-    private let separation = CGFloat(100)
+    private let separation = CGFloat(200)
     
     init(_ mission: Mission) {
         self.mission = mission
@@ -38,11 +38,13 @@ class Terminal: NSScrollView {
     }
     
     override func mouseDragged(with: NSEvent) {
-        documentView!.subviews.compactMap({ $0 as? Node }).forEach { $0.move(with.locationInWindow) }
+        guard let vertex = layer!.sublayers!.compactMap({ $0 as? Vertex }).filter({ $0.destination == nil }).first else { return }
+        node(hitTest(with.locationInWindow))?.prospect(vertex)
+        vertex.move(with.locationInWindow)
     }
     
     override func mouseUp(with: NSEvent) {
-        documentView!.subviews.compactMap({ $0 as? Node }).forEach { $0.drop(node(hitTest(with.locationInWindow))) }
+        layer!.sublayers!.compactMap({ $0 as? Vertex }).filter({ $0.destination == nil }).forEach({ $0.connect() })
     }
     
     private func node(_ view: NSView?) -> Node? { return view is Node ? view as? Node : view == nil ? nil : node(view!.superview) }

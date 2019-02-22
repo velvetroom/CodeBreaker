@@ -4,24 +4,23 @@ private protocol State {
     func update(_: Node!)
     func click(_: Node!)
     func stop(_: Node!)
-    func drop(_: Node?, _: Node!)
+    func drag(_: Node!)
     func select(_: Emoji, _: Node!)
-    func move(_: CGPoint, _: Node!)
+    func prospect(_: Vertex, _: Node!)
 }
 
 private extension State {
     func click(_: Node!) { }
     func stop(_: Node!) { }
-    func drop(_: Node?, _: Node!) { }
+    func drag(_: Node!) { }
     func select(_: Emoji, _: Node! = nil) { }
-    func move(_: CGPoint, _: Node!) { }
+    func prospect(_: Vertex, _: Node!) { }
 }
 
 class Node: NSView, State {
     fileprivate var state: State! { didSet { state.update(self) } }
     fileprivate weak var emoji: Emoji!
     fileprivate weak var close: NSButton?
-    fileprivate weak var vertex: Vertex?
     
     init() {
         super.init(frame: .zero)
@@ -49,13 +48,15 @@ class Node: NSView, State {
     func update(_: Node! = nil) { state.update(self) }
     func click(_: Node! = nil) { state.click(self) }
     func stop(_: Node! = nil) { state.stop(self) }
-    func drop(_ this: Node?, _: Node! = nil) { state.drop(this, self) }
+    func drag(_: Node! = nil) { state.drag(self) }
     func select(_ emoji: Emoji, _: Node! = nil) { state.select(emoji, self) }
-    func move(_ to: CGPoint, _: Node! = nil) { state.move(to, self) }
+    func prospect(_ vertex: Vertex, _: Node! = nil) { state.prospect(vertex, self) }
     
     @objc fileprivate func remove() {
         close!.removeFromSuperview()
         emoji.stringValue = String()
+        App.shared.terminal!.layer!.sublayers!.compactMap({ $0 as? Vertex })
+            .filter({ $0.origin === self || $0.destination === self }).forEach { $0.removeFromSuperlayer() }
         state = None()
     }
 }
@@ -114,10 +115,19 @@ private class Code: State {
     }
     
     fileprivate func click(_ node: Node!) {
+        guard App.shared.terminal!.layer!.sublayers!.compactMap({ $0 as? Vertex }).filter({ $0.origin === node }).count <
+            App.shared.terminal!.mission.size else { return }
         node.state = Drag()
         let vertex = Vertex(node)
         App.shared.terminal!.layer!.addSublayer(vertex)
-        node.vertex = vertex
+    }
+    
+    fileprivate func drag(_ node: Node!) {
+        node.state = Drop()
+    }
+    
+    fileprivate func prospect(_ vertex: Vertex, _ node: Node!) {
+        vertex.prospect = node
     }
 }
 
@@ -129,11 +139,20 @@ private class Drag: State {
         node.close!.removeFromSuperview()
     }
     
-    func drop(_ this: Node?, _ node: Node!) {
+    fileprivate func stop(_ node: Node!) {
         node.state = Code()
     }
+}
+
+private class Drop: State {
+    fileprivate func update(_ node: Node!) {
+        (node.layer as! CAShapeLayer).lineWidth = 10
+        (node.layer as! CAShapeLayer).strokeColor = NSColor.halo.cgColor
+        (node.layer as! CAShapeLayer).fillColor = NSColor.halo.cgColor
+        node.close!.removeFromSuperview()
+    }
     
-    func move(_ to: CGPoint, _ node: Node!) {
-        node.vertex!.move(to)
+    fileprivate func stop(_ node: Node!) {
+        node.state = Code()
     }
 }

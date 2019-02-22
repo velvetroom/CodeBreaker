@@ -13,7 +13,7 @@ class Graph {
                 .filter({ {
                     $2 > 1 || ($2 > 0 && ($0 == message.count - 1 || $1 !== route.last?.node))
                 } (c.0, $0, $0.vertex.filter({ $0.node == nil }).count) }).first ??
-                Node(c.1, size: level.lanes.count > 1 ? 2 : 1)
+                Node(c.1, size: level.size)
         } ($0) ))}
     }
 }

@@ -10,6 +10,7 @@ class Factory {
             mission.code = Graph($0, level: player.level).code
             mission.vertical = player.level.lanes.count
             mission.horizontal = Int(ceil(Float($0.count) / Float(mission.vertical))) + mission.vertical - 1
+            mission.size = player.level.size
             return mission
         } (Codes.list[player.code + 1])
     }

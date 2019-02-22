@@ -5,4 +5,5 @@ public struct Mission {
     public internal(set) var cypher = String()
     public internal(set) var horizontal = Int()
     public internal(set) var vertical = Int()
+    public internal(set) var size = Int()
 }
