@@ -31,6 +31,7 @@
 		2043E72D2219E2A000482FBC /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72C2219E2A000482FBC /* Factory.swift */; };
 		2043E72E2219E2A000482FBC /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72C2219E2A000482FBC /* Factory.swift */; };
 		209E943E221FE1C0008BB79A /* Mac.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209E943D221FE1C0008BB79A /* Mac.xcassets */; };
+		209E9440221FF05C008BB79A /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E943F221FF05C008BB79A /* Vertex.swift */; };
 		20A7722622196102004F34AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722422196074004F34AC /* Node.swift */; };
 		20A7722822197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
 		20A7722922197D87004F34AC /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722722197D87004F34AC /* Level.swift */; };
@@ -130,6 +131,7 @@
 		2043E72A2219E24900482FBC /* TestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactory.swift; sourceTree = "<group>"; };
 		2043E72C2219E2A000482FBC /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		209E943D221FE1C0008BB79A /* Mac.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mac.xcassets; sourceTree = "<group>"; };
+		209E943F221FF05C008BB79A /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		20A7722422196074004F34AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		20A7722722197D87004F34AC /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		20A7722A22198006004F34AC /* Rookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rookie.swift; sourceTree = "<group>"; };
@@ -231,15 +233,16 @@
 				200B2EB722184A5E00738347 /* Mac.plist */,
 				200B2EB622184A5E00738347 /* Mac.storyboard */,
 				20D70E23221EAEEA0080A180 /* Alphabet.swift */,
-				201D58B7221EE43500A9A6C6 /* Option.swift */,
 				200B2EB822184A5E00738347 /* App.swift */,
 				20D70E21221EA60F0080A180 /* Emoji.swift */,
-				20A7723622199861004F34AC /* Gradient.swift */,
 				20D329CE221ED2E1006E48AD /* Extensions.swift */,
+				20A7723622199861004F34AC /* Gradient.swift */,
+				20D329BE221ECFE9006E48AD /* Link.swift */,
 				20A7722422196074004F34AC /* Node.swift */,
+				201D58B7221EE43500A9A6C6 /* Option.swift */,
 				20D70E25221EB41C0080A180 /* Sheet.swift */,
 				201EB68E2218613600E4B33F /* Terminal.swift */,
-				20D329BE221ECFE9006E48AD /* Link.swift */,
+				209E943F221FF05C008BB79A /* Vertex.swift */,
 				209E943D221FE1C0008BB79A /* Mac.xcassets */,
 			);
 			path = Mac;
@@ -547,6 +550,7 @@
 				20D70E22221EA60F0080A180 /* Emoji.swift in Sources */,
 				201D58B8221EE43500A9A6C6 /* Option.swift in Sources */,
 				20A7722622196102004F34AC /* Node.swift in Sources */,
+				209E9440221FF05C008BB79A /* Vertex.swift in Sources */,
 				20D329BF221ECFE9006E48AD /* Link.swift in Sources */,
 				20D329CF221ED2E1006E48AD /* Extensions.swift in Sources */,
 				20A7723722199861004F34AC /* Gradient.swift in Sources */,
