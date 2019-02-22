@@ -60,6 +60,11 @@ class Alphabet: Sheet {
     
     required init?(coder: NSCoder) { return nil }
     
+    override func close() {
+        super.close()
+        node.stop()
+    }
+    
     @objc private func option(_ option: Option) {
         node.select(option.emoji)
         close()

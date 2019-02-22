@@ -20,7 +20,7 @@ class Node: NSView, State {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         layer = {
-            $0.path = .init(ellipseIn: CGRect(x: 10, y: 10, width: 60, height: 60), transform: nil)
+            $0.path = .init(ellipseIn: CGRect(x: 10, y: 10, width: 40, height: 40), transform: nil)
             return $0
         } (CAShapeLayer())
         wantsLayer = true
@@ -29,8 +29,8 @@ class Node: NSView, State {
         addSubview(emoji)
         self.emoji = emoji
         
-        widthAnchor.constraint(equalToConstant: 80).isActive = true
-        heightAnchor.constraint(equalToConstant: 80).isActive = true
+        widthAnchor.constraint(equalToConstant: 60).isActive = true
+        heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         emoji.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         emoji.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
@@ -68,7 +68,9 @@ private class Edit: State {
         
     }
     
-    fileprivate func stop(_ node: Node!) { node.state = None() }
+    fileprivate func stop(_ node: Node!) {
+        node.state = node.emoji.stringValue.isEmpty ? None() : Code()
+    }
     
     fileprivate func select(_ emoji: Emoji, _ node: Node!) {
         node.emoji.stringValue = emoji.stringValue
@@ -84,6 +86,7 @@ private class Code: State {
     }
     
     fileprivate func click(_ node: Node!) {
-        
+        node.state = Edit()
+        Alphabet(node)
     }
 }
