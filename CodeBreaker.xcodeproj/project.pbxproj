@@ -16,6 +16,8 @@
 		200B2EE122185B1200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDD22185AEF00738347 /* libBreaker.a */; };
 		200B2EE222185B1800738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
 		201D58B8221EE43500A9A6C6 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D58B7221EE43500A9A6C6 /* Option.swift */; };
+		201E3CFE2221543F005F8E26 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201E3CFD2221543F005F8E26 /* Icons.xcassets */; };
+		201E3CFF2221543F005F8E26 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201E3CFD2221543F005F8E26 /* Icons.xcassets */; };
 		201EB68F2218613600E4B33F /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EB68E2218613600E4B33F /* Terminal.swift */; };
 		2043E71B2219CD5100482FBC /* Breaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71A2219CD5100482FBC /* Breaker.swift */; };
 		2043E71C2219CD5100482FBC /* Breaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71A2219CD5100482FBC /* Breaker.swift */; };
@@ -30,7 +32,6 @@
 		2043E72B2219E24900482FBC /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72A2219E24900482FBC /* TestFactory.swift */; };
 		2043E72D2219E2A000482FBC /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72C2219E2A000482FBC /* Factory.swift */; };
 		2043E72E2219E2A000482FBC /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E72C2219E2A000482FBC /* Factory.swift */; };
-		209E943E221FE1C0008BB79A /* Mac.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209E943D221FE1C0008BB79A /* Mac.xcassets */; };
 		209E9440221FF05C008BB79A /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E943F221FF05C008BB79A /* Vertex.swift */; };
 		209E944222201B1C008BB79A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E944122201B1C008BB79A /* Input.swift */; };
 		20A7722622196102004F34AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7722422196074004F34AC /* Node.swift */; };
@@ -119,6 +120,8 @@
 		200B2EDC22185AEA00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		200B2EDD22185AEF00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		201D58B7221EE43500A9A6C6 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		201E3CFD2221543F005F8E26 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		201E3D00222154DE005F8E26 /* CodeBreaker.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = CodeBreaker.sketch; sourceTree = "<group>"; };
 		201EB68B2218600100E4B33F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68C2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68D2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +134,6 @@
 		2043E7282219D76A00482FBC /* TestAlphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlphabet.swift; sourceTree = "<group>"; };
 		2043E72A2219E24900482FBC /* TestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactory.swift; sourceTree = "<group>"; };
 		2043E72C2219E2A000482FBC /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
-		209E943D221FE1C0008BB79A /* Mac.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mac.xcassets; sourceTree = "<group>"; };
 		209E943F221FF05C008BB79A /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		209E944122201B1C008BB79A /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		20A7722422196074004F34AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
@@ -201,20 +203,21 @@
 		200B2E51221847D000738347 = {
 			isa = PBXGroup;
 			children = (
-				200B2EC122184A7500738347 /* CodeBreaker */,
-				200B2EBC22184A6A00738347 /* Tests */,
-				200B2EB422184A5E00738347 /* Mac */,
-				200B2EAD22184A5500738347 /* iOS */,
-				200B2EC622184A7A00738347 /* Shared */,
-				200B2ECB2218559800738347 /* Frameworks */,
-				200B2EAA22184A2500738347 /* LICENSE */,
-				200B2EAC22184A2500738347 /* README.md */,
 				200B2EAB22184A2500738347 /* .gitignore */,
+				200B2EAA22184A2500738347 /* LICENSE */,
 				200B2EDC22185AEA00738347 /* libBreaker.a */,
 				200B2EDD22185AEF00738347 /* libBreaker.a */,
-				201EB68B2218600100E4B33F /* Tests.xctest */,
 				201EB68C2218600100E4B33F /* CodeBreaker.app */,
 				201EB68D2218600100E4B33F /* CodeBreaker.app */,
+				200B2EAC22184A2500738347 /* README.md */,
+				201E3D00222154DE005F8E26 /* CodeBreaker.sketch */,
+				201EB68B2218600100E4B33F /* Tests.xctest */,
+				200B2EC122184A7500738347 /* CodeBreaker */,
+				200B2ECB2218559800738347 /* Frameworks */,
+				200B2EAD22184A5500738347 /* iOS */,
+				200B2EB422184A5E00738347 /* Mac */,
+				200B2EC622184A7A00738347 /* Shared */,
+				200B2EBC22184A6A00738347 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -246,7 +249,6 @@
 				201EB68E2218613600E4B33F /* Terminal.swift */,
 				209E943F221FF05C008BB79A /* Vertex.swift */,
 				209E944122201B1C008BB79A /* Input.swift */,
-				209E943D221FE1C0008BB79A /* Mac.xcassets */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -287,9 +289,11 @@
 		200B2EC622184A7A00738347 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				20D329C7221ED291006E48AD /* Fonts */,
+				20D329C8221ED291006E48AD /* SFMono-Light.otf */,
+				20D329C9221ED291006E48AD /* SFMono-Bold.otf */,
 				20D329C0221ED0C8006E48AD /* Shared.swift */,
 				20D329C3221ED1BA006E48AD /* Localizable.strings */,
+				201E3CFD2221543F005F8E26 /* Icons.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -299,15 +303,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		20D329C7221ED291006E48AD /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				20D329C8221ED291006E48AD /* SFMono-Light.otf */,
-				20D329C9221ED291006E48AD /* SFMono-Bold.otf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,10 +466,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D329CA221ED291006E48AD /* SFMono-Light.otf in Resources */,
-				209E943E221FE1C0008BB79A /* Mac.xcassets in Resources */,
 				200B2EB922184A5E00738347 /* Mac.storyboard in Resources */,
 				20D329CC221ED291006E48AD /* SFMono-Bold.otf in Resources */,
 				20D329C5221ED1BA006E48AD /* Localizable.strings in Resources */,
+				201E3CFE2221543F005F8E26 /* Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +481,7 @@
 				200B2EB122184A5500738347 /* Splash.storyboard in Resources */,
 				20D329CD221ED291006E48AD /* SFMono-Bold.otf in Resources */,
 				20D329C6221ED1BA006E48AD /* Localizable.strings in Resources */,
+				201E3CFF2221543F005F8E26 /* Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

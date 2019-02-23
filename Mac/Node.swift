@@ -99,7 +99,7 @@ private class Code: State {
         
         let close = NSButton()
         close.translatesAutoresizingMaskIntoConstraints = false
-        close.image = NSImage(named: "close")
+        close.image = NSImage(named: "remove")
         close.setButtonType(.momentaryChange)
         close.imageScaling = .scaleNone
         close.isBordered = false
