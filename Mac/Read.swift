@@ -12,7 +12,7 @@ class Read: NSView {
         
         var left = leftAnchor
         code.forEach {
-            let label = Label(String($0), color: .white, font: .bold(16), align: .center)
+            let label = Label(String($0), font: .bold(16), align: .center)
             label.wantsLayer = true
             label.layer!.backgroundColor = NSColor.black.cgColor
             label.layer!.cornerRadius = 4

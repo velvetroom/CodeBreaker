@@ -5,6 +5,7 @@ class Terminal: NSScrollView {
     let mission: Mission
     private weak var start: Node!
     private weak var read: Read!
+    private weak var expected: Expected!
     private weak var buttonPlay: Button!
     private weak var buttonStop: Button!
     private let separation = CGFloat(200)
@@ -45,6 +46,10 @@ class Terminal: NSScrollView {
         documentView!.addSubview(read)
         self.read = read
         
+        let expected = Expected(mission.cypher)
+        documentView!.addSubview(expected)
+        self.expected = expected
+        
         let buttonPlay = Button("play", target: self, action: #selector(play))
         buttonPlay.keyEquivalent = "\r"
         buttonPlay.keyEquivalentModifierMask = .command
@@ -67,6 +72,9 @@ class Terminal: NSScrollView {
         
         read.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
         read.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+        expected.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20).isActive = true
+        expected.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
         buttonPlay.topAnchor.constraint(equalTo: read.bottomAnchor, constant: 5).isActive = true
         buttonPlay.leftAnchor.constraint(equalTo: read.leftAnchor).isActive = true
