@@ -5,7 +5,7 @@ class Link: NSButton {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         wantsLayer = true
-        layer!.backgroundColor = NSColor(white: 1, alpha:0.2).cgColor
+        layer!.backgroundColor = NSColor.shade.cgColor
         layer!.cornerRadius = 6
         setButtonType(.momentaryChange)
         isBordered = false
@@ -18,5 +18,4 @@ class Link: NSButton {
     }
     
     required init?(coder: NSCoder) { return nil }
-    override func mouseDown(with: NSEvent) { sendAction(action, to: target) }
 }

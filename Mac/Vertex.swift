@@ -58,24 +58,27 @@ class Vertex: CAShapeLayer {
             return $0
         } (CGMutablePath())
         let input = Input(App.shared.terminal!.layer!.sublayers!.compactMap({ $0 as? Vertex })
-            .filter({ $0.origin === origin && $0 !== self }).reduce(0, { Int($1.input!.field.stringValue) == 0 ? 1 : 0 }))
+            .filter({ $0.origin === origin && $0 !== self }).reduce(0, { Int($1.input!.field.stringValue) == 0 ? 1 : 0 }),
+                          target: self, action: #selector(code))
         App.shared.terminal!.documentView!.addSubview(input)
         self.input = input
         
         if origin.frame.midX == destination!.frame.midX {
             input.centerXAnchor.constraint(equalTo: origin.centerXAnchor).isActive = true
         } else if origin.frame.midX > destination!.frame.midX {
-            input.rightAnchor.constraint(equalTo: origin.leftAnchor).isActive = true
+            input.rightAnchor.constraint(equalTo: origin.leftAnchor, constant: 11).isActive = true
         } else {
-            input.leftAnchor.constraint(equalTo: origin.rightAnchor).isActive = true
+            input.leftAnchor.constraint(equalTo: origin.rightAnchor, constant: -11).isActive = true
         }
         
         if origin.frame.midY == destination!.frame.midY {
             input.centerYAnchor.constraint(equalTo: origin.centerYAnchor).isActive = true
         } else if origin.frame.midY > destination!.frame.midY {
-            input.topAnchor.constraint(equalTo: origin.bottomAnchor).isActive = true
+            input.topAnchor.constraint(equalTo: origin.bottomAnchor, constant: -11).isActive = true
         } else {
-            input.bottomAnchor.constraint(equalTo: origin.topAnchor).isActive = true
+            input.bottomAnchor.constraint(equalTo: origin.topAnchor, constant: 11).isActive = true
         }
     }
+    
+    @objc private func code() { Codes(self) }
 }

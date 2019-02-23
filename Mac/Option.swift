@@ -16,7 +16,7 @@ class Option: NSControl {
         
         let emoji = Emoji()
         emoji.stringValue = value
-        emoji.alphaValue = 0.6
+        emoji.alphaValue = 0.8
         addSubview(emoji)
         self.emoji = emoji
         
@@ -37,6 +37,6 @@ class Option: NSControl {
     
     override func mouseUp(with: NSEvent) {
         layer!.backgroundColor = NSColor.black.cgColor
-        emoji.alphaValue = 0.6
+        emoji.alphaValue = 0.8
     }
 }

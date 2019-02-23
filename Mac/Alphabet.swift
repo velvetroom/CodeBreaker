@@ -29,8 +29,7 @@ class Alphabet: Sheet {
         scroll.documentView!.rightAnchor.constraint(greaterThanOrEqualTo: scroll.rightAnchor).isActive = true
         addSubview(scroll)
         
-        let close = Link(.local("Alphabet.close"), target: self, action: #selector(self.close))
-        close.target = self
+        let close = Button("back", target: self, action: #selector(self.close))
         addSubview(close)
         
         base.topAnchor.constraint(equalTo: scroll.topAnchor, constant: -20).isActive = true
@@ -44,7 +43,7 @@ class Alphabet: Sheet {
         scroll.widthAnchor.constraint(lessThanOrEqualToConstant: 540).isActive = true
         
         close.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        close.topAnchor.constraint(equalTo: base.bottomAnchor, constant: 50).isActive = true
+        close.topAnchor.constraint(equalTo: base.bottomAnchor, constant: 10).isActive = true
         
         var left = scroll.documentView!.leftAnchor
         App.shared.terminal!.mission.alphabet.forEach {

@@ -39,7 +39,7 @@ class Terminal: NSScrollView {
     
     override func mouseDragged(with: NSEvent) {
         guard let vertex = layer!.sublayers!.compactMap({ $0 as? Vertex }).filter({ $0.destination == nil }).first else { return }
-        node(hitTest(with.locationInWindow))?.prospect(vertex)
+        vertex.prospect = { $0?.prospect == true ? $0 : nil } (node(hitTest(with.locationInWindow)))
         vertex.move(with.locationInWindow)
     }
     

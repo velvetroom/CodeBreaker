@@ -16,8 +16,10 @@
 		200B2EE122185B1200738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDD22185AEF00738347 /* libBreaker.a */; };
 		200B2EE222185B1800738347 /* libBreaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B2EDC22185AEA00738347 /* libBreaker.a */; };
 		201D58B8221EE43500A9A6C6 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D58B7221EE43500A9A6C6 /* Option.swift */; };
-		201E3CFE2221543F005F8E26 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201E3CFD2221543F005F8E26 /* Icons.xcassets */; };
-		201E3CFF2221543F005F8E26 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201E3CFD2221543F005F8E26 /* Icons.xcassets */; };
+		201E3CFE2221543F005F8E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201E3CFD2221543F005F8E26 /* Assets.xcassets */; };
+		201E3CFF2221543F005F8E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201E3CFD2221543F005F8E26 /* Assets.xcassets */; };
+		201E3D0222215606005F8E26 /* Codes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E3D0122215606005F8E26 /* Codes.swift */; };
+		201E3D0422215916005F8E26 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E3D0322215916005F8E26 /* Button.swift */; };
 		201EB68F2218613600E4B33F /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EB68E2218613600E4B33F /* Terminal.swift */; };
 		2043E71B2219CD5100482FBC /* Breaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71A2219CD5100482FBC /* Breaker.swift */; };
 		2043E71C2219CD5100482FBC /* Breaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71A2219CD5100482FBC /* Breaker.swift */; };
@@ -120,8 +122,10 @@
 		200B2EDC22185AEA00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		200B2EDD22185AEF00738347 /* libBreaker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBreaker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		201D58B7221EE43500A9A6C6 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
-		201E3CFD2221543F005F8E26 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		201E3CFD2221543F005F8E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201E3D00222154DE005F8E26 /* CodeBreaker.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = CodeBreaker.sketch; sourceTree = "<group>"; };
+		201E3D0122215606005F8E26 /* Codes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codes.swift; sourceTree = "<group>"; };
+		201E3D0322215916005F8E26 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		201EB68B2218600100E4B33F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68C2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68D2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +242,7 @@
 				200B2EB722184A5E00738347 /* Mac.plist */,
 				200B2EB622184A5E00738347 /* Mac.storyboard */,
 				20D70E23221EAEEA0080A180 /* Alphabet.swift */,
+				201E3D0322215916005F8E26 /* Button.swift */,
 				200B2EB822184A5E00738347 /* App.swift */,
 				20D70E21221EA60F0080A180 /* Emoji.swift */,
 				20D329CE221ED2E1006E48AD /* Extensions.swift */,
@@ -249,6 +254,7 @@
 				201EB68E2218613600E4B33F /* Terminal.swift */,
 				209E943F221FF05C008BB79A /* Vertex.swift */,
 				209E944122201B1C008BB79A /* Input.swift */,
+				201E3D0122215606005F8E26 /* Codes.swift */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -293,7 +299,7 @@
 				20D329C9221ED291006E48AD /* SFMono-Bold.otf */,
 				20D329C0221ED0C8006E48AD /* Shared.swift */,
 				20D329C3221ED1BA006E48AD /* Localizable.strings */,
-				201E3CFD2221543F005F8E26 /* Icons.xcassets */,
+				201E3CFD2221543F005F8E26 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -469,7 +475,7 @@
 				200B2EB922184A5E00738347 /* Mac.storyboard in Resources */,
 				20D329CC221ED291006E48AD /* SFMono-Bold.otf in Resources */,
 				20D329C5221ED1BA006E48AD /* Localizable.strings in Resources */,
-				201E3CFE2221543F005F8E26 /* Icons.xcassets in Resources */,
+				201E3CFE2221543F005F8E26 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +487,7 @@
 				200B2EB122184A5500738347 /* Splash.storyboard in Resources */,
 				20D329CD221ED291006E48AD /* SFMono-Bold.otf in Resources */,
 				20D329C6221ED1BA006E48AD /* Localizable.strings in Resources */,
-				201E3CFF2221543F005F8E26 /* Icons.xcassets in Resources */,
+				201E3CFF2221543F005F8E26 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,8 +560,10 @@
 				20D329CF221ED2E1006E48AD /* Extensions.swift in Sources */,
 				20A7723722199861004F34AC /* Gradient.swift in Sources */,
 				200B2EBB22184A5E00738347 /* App.swift in Sources */,
+				201E3D0422215916005F8E26 /* Button.swift in Sources */,
 				201EB68F2218613600E4B33F /* Terminal.swift in Sources */,
 				209E944222201B1C008BB79A /* Input.swift in Sources */,
+				201E3D0222215606005F8E26 /* Codes.swift in Sources */,
 				20D70E26221EB41C0080A180 /* Sheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
