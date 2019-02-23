@@ -3,7 +3,10 @@ import Breaker
 
 class Terminal: NSScrollView {
     let mission: Mission
-    private weak var start:Node!
+    private weak var start: Node!
+    private weak var read: Read!
+    private weak var buttonPlay: Button!
+    private weak var buttonStop: Button!
     private let separation = CGFloat(200)
     
     init(_ mission: Mission) {
@@ -38,6 +41,22 @@ class Terminal: NSScrollView {
             }
         }
         
+        let read = Read(mission.code)
+        documentView!.addSubview(read)
+        self.read = read
+        
+        let buttonPlay = Button("play", target: self, action: #selector(play))
+        buttonPlay.keyEquivalent = "\r"
+        buttonPlay.keyEquivalentModifierMask = .command
+        documentView!.addSubview(buttonPlay)
+        self.buttonPlay = buttonPlay
+        
+        let buttonStop = Button("stop", target: self, action: #selector(stop))
+        buttonStop.isEnabled = false
+        buttonStop.keyEquivalent = "\u{1b}"
+        documentView!.addSubview(buttonStop)
+        self.buttonStop = buttonStop
+        
         widthAnchor.constraint(equalToConstant: 800).isActive = true
         heightAnchor.constraint(equalToConstant: 600).isActive = true
         
@@ -45,16 +64,27 @@ class Terminal: NSScrollView {
         start.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         start.rightAnchor.constraint(equalTo: self.start.centerXAnchor).isActive = true
         start.centerYAnchor.constraint(equalTo: self.start.centerYAnchor).isActive = true
+        
+        read.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
+        read.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+        buttonPlay.topAnchor.constraint(equalTo: read.bottomAnchor, constant: 5).isActive = true
+        buttonPlay.leftAnchor.constraint(equalTo: read.leftAnchor).isActive = true
+        
+        buttonStop.topAnchor.constraint(equalTo: read.bottomAnchor, constant: 5).isActive = true
+        buttonStop.leftAnchor.constraint(equalTo: buttonPlay.rightAnchor, constant: 5).isActive = true
     }
     
     required init?(coder: NSCoder) { return nil }
     
     override func mouseDown(with: NSEvent) {
+        guard buttonPlay.isEnabled else { return }
         documentView!.subviews.compactMap({ $0 as? Node }).forEach { $0.stop() }
         node(hitTest(with.locationInWindow))?.click()
     }
     
     override func mouseDragged(with: NSEvent) {
+        guard buttonPlay.isEnabled else { return }
         guard let vertex = layer!.sublayers!.compactMap({ $0 as? Vertex }).filter({ $0.destination == nil }).first else { return }
         vertex.prospect = { $0?.prospect == true ? $0 : nil } (node(hitTest(with.locationInWindow)))
         vertex.move(with.locationInWindow)
@@ -65,4 +95,14 @@ class Terminal: NSScrollView {
     }
     
     private func node(_ view: NSView?) -> Node? { return view is Node ? view as? Node : view == nil ? nil : node(view!.superview) }
+    
+    @objc private func play() {
+        buttonPlay.isEnabled = false
+        buttonStop.isEnabled = true
+    }
+    
+    @objc private func stop() {
+        buttonPlay.isEnabled = true
+        buttonStop.isEnabled = false
+    }
 }

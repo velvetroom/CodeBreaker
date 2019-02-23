@@ -22,6 +22,7 @@
 		201E3D0422215916005F8E26 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E3D0322215916005F8E26 /* Button.swift */; };
 		201E3D082221747E005F8E26 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E3D072221747E005F8E26 /* Alert.swift */; };
 		201E3D0A2221749E005F8E26 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E3D092221749E005F8E26 /* Label.swift */; };
+		201E3D0C22217F13005F8E26 /* Read.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E3D0B22217F13005F8E26 /* Read.swift */; };
 		201EB68F2218613600E4B33F /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201EB68E2218613600E4B33F /* Terminal.swift */; };
 		2043E71B2219CD5100482FBC /* Breaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71A2219CD5100482FBC /* Breaker.swift */; };
 		2043E71C2219CD5100482FBC /* Breaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043E71A2219CD5100482FBC /* Breaker.swift */; };
@@ -130,6 +131,7 @@
 		201E3D0322215916005F8E26 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		201E3D072221747E005F8E26 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		201E3D092221749E005F8E26 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		201E3D0B22217F13005F8E26 /* Read.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Read.swift; sourceTree = "<group>"; };
 		201EB68B2218600100E4B33F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68C2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201EB68D2218600100E4B33F /* CodeBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,22 +247,23 @@
 				200B2EB522184A5E00738347 /* Mac.entitlements */,
 				200B2EB722184A5E00738347 /* Mac.plist */,
 				200B2EB622184A5E00738347 /* Mac.storyboard */,
-				20D70E23221EAEEA0080A180 /* Alphabet.swift */,
-				201E3D0322215916005F8E26 /* Button.swift */,
-				200B2EB822184A5E00738347 /* App.swift */,
 				201E3D072221747E005F8E26 /* Alert.swift */,
-				201E3D092221749E005F8E26 /* Label.swift */,
+				20D70E23221EAEEA0080A180 /* Alphabet.swift */,
+				200B2EB822184A5E00738347 /* App.swift */,
+				201E3D0322215916005F8E26 /* Button.swift */,
+				201E3D0122215606005F8E26 /* Codes.swift */,
 				20D70E21221EA60F0080A180 /* Emoji.swift */,
 				20D329CE221ED2E1006E48AD /* Extensions.swift */,
 				20A7723622199861004F34AC /* Gradient.swift */,
+				209E944122201B1C008BB79A /* Input.swift */,
+				201E3D092221749E005F8E26 /* Label.swift */,
 				20D329BE221ECFE9006E48AD /* Link.swift */,
 				20A7722422196074004F34AC /* Node.swift */,
 				201D58B7221EE43500A9A6C6 /* Option.swift */,
+				201E3D0B22217F13005F8E26 /* Read.swift */,
 				20D70E25221EB41C0080A180 /* Sheet.swift */,
 				201EB68E2218613600E4B33F /* Terminal.swift */,
 				209E943F221FF05C008BB79A /* Vertex.swift */,
-				209E944122201B1C008BB79A /* Input.swift */,
-				201E3D0122215606005F8E26 /* Codes.swift */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D70E24221EAEEA0080A180 /* Alphabet.swift in Sources */,
+				201E3D0C22217F13005F8E26 /* Read.swift in Sources */,
 				20D329C1221ED0C8006E48AD /* Shared.swift in Sources */,
 				20D70E22221EA60F0080A180 /* Emoji.swift in Sources */,
 				201D58B8221EE43500A9A6C6 /* Option.swift in Sources */,
