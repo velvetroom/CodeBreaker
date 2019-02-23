@@ -5,7 +5,7 @@ class Alert: Sheet {
         super.init()
         layer!.backgroundColor = NSColor(white: 0, alpha: 0.9).cgColor
         
-        let label = Label(message, font: .bold(20))
+        let label = Label(message, font: .bold(20), align: .center)
         addSubview(label)
         
         let close = Button("back", target: self, action: #selector(self.close))

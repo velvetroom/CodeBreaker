@@ -13,7 +13,8 @@ class TestFactory: XCTestCase {
     }
     
     func testCypher() {
-        XCTAssertEqual(Alphabet.map["h"]! + Alphabet.map["i"]!, Factory.mission(Player()).cypher)
+        XCTAssertEqual(Alphabet.map["h"], Factory.mission(Player()).cypher[0])
+        XCTAssertEqual(Alphabet.map["i"], Factory.mission(Player()).cypher[1])
     }
     
     func testAlphabet() {

@@ -58,7 +58,7 @@ class Vertex: CAShapeLayer {
             return $0
         } (CGMutablePath())
         let input = Input(App.shared.terminal!.layer!.sublayers!.compactMap({ $0 as? Vertex })
-            .filter({ $0.origin === origin && $0 !== self }).reduce(0, { Int($1.input!.field.stringValue) == 0 ? 1 : 0 }),
+            .filter({ $0.origin === origin && $0 !== self }).reduce(0, { Int($1.input!.label.stringValue) == 0 ? 1 : 0 }),
                           target: self, action: #selector(code))
         App.shared.terminal!.documentView!.addSubview(input)
         self.input = input

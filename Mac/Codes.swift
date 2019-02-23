@@ -38,12 +38,12 @@ class Codes: Sheet {
     
     @objc private func zero() {
         close()
-        vertex.input!.field.stringValue = "0"
+        vertex.input!.label.stringValue = "0"
     }
     
     @objc private func one() {
         close()
-        vertex.input!.field.stringValue = "1"
+        vertex.input!.label.stringValue = "1"
     }
     
     @objc private func remove() {

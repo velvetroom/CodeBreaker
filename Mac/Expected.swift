@@ -1,6 +1,6 @@
 import AppKit
 
-class Read: NSView {
+class Expected: NSView {
     init(_ code: [Int]) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false

@@ -1,7 +1,7 @@
 import AppKit
 
 class Input: NSControl {
-    private(set) weak var field: NSTextField!
+    private(set) weak var label: Label!
     
     init(_ value: Int, target: AnyObject, action: Selector) {
         super.init(frame: .zero)
@@ -12,23 +12,15 @@ class Input: NSControl {
         self.target = target
         self.action = action
         
-        let field = NSTextField()
-        field.translatesAutoresizingMaskIntoConstraints = false
-        field.alignment = .center
-        field.font = .bold(14)
-        field.textColor = .black
-        field.backgroundColor = .clear
-        field.isBezeled = false
-        field.isEditable = false
-        field.stringValue = String(value)
-        addSubview(field)
-        self.field = field
+        let label = Label(String(value), color: .black, font: .bold(14), align: .center)
+        addSubview(label)
+        self.label = label
         
         widthAnchor.constraint(equalToConstant: 26).isActive = true
         heightAnchor.constraint(equalToConstant: 26).isActive = true
         
-        field.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        field.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -1).isActive = true
+        label.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -1).isActive = true
     }
     
     required init?(coder: NSCoder) { return nil }
