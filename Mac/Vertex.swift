@@ -19,7 +19,7 @@ class Vertex: CAShapeLayer {
     func move(_ to: CGPoint) {
         path = {
             $0.move(to: CGPoint(x: origin.frame.midX, y: origin.frame.midY))
-            $0.addLine(to: CGPoint(x: to.x, y: App.shared.frame.height - to.y))
+            $0.addLine(to: App.shared.terminal!.convert(to, from: App.shared.contentView))
             return $0
         } (CGMutablePath())
     }

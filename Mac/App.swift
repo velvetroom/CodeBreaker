@@ -29,10 +29,8 @@ import Breaker
         contentView!.addSubview(gradientLeft)
         contentView!.addSubview(gradientRight)
         
-        terminal.topAnchor.constraint(equalTo: contentView!.topAnchor).isActive = true
-        terminal.leftAnchor.constraint(equalTo: contentView!.leftAnchor).isActive = true
-        terminal.rightAnchor.constraint(equalTo: contentView!.rightAnchor).isActive = true
-        terminal.bottomAnchor.constraint(equalTo: contentView!.bottomAnchor).isActive = true
+        terminal.centerXAnchor.constraint(equalTo: contentView!.centerXAnchor).isActive = true
+        terminal.centerYAnchor.constraint(equalTo: contentView!.centerYAnchor).isActive = true
         
         gradientLeft.topAnchor.constraint(equalTo: contentView!.topAnchor).isActive = true
         gradientLeft.bottomAnchor.constraint(equalTo: contentView!.bottomAnchor).isActive = true
